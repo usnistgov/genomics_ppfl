@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Connect</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<!--open graph data-->
+	<meta property="og:title" content="Genomics PPFL Platform: 2025 Red Teaming Event" />
+	<meta property="og:description"
+		content="The NIST Privacy Engineering Program has launched the Genomics PPFL Platform: 2025 Red Teaming Event 
+			to direct the research community to explore the complex interaction between model utility, privacy interventions 
+			such as noise and clipping bounds, data distribution, and resilience to membership and data reconstruction 
+			attacks. This will inform consensus guidance on privacy for federated learning collaborations between genomics 
+			researchers." />
+
+	<meta property="og:site_name" content="pages.nist.gov/genomics_ppfl" />
+	<meta property="og:image" content="https://pages.nist.gov/privacy_collaborative_research_cycle/images/image4.png" />
+	<meta property="og:image:alt" content="Genomics PPFL Platform: 2025 Red Teaming Event" />
+	<meta property="og:image:width" content="400" />
+	<meta property="og:image:height" content="300" />
+
+	<script src="../assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../nist_js/leave_notice.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/NISTLeaveNotice.css" />
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			// Mark external (non-nist.gov) A tags with class "external"
+			//If the adress start with https and ends with nist.gov
+			var re_nist = new RegExp('^https?:\/\/((^\/)*\.)*nist\\.gov(\/|$)');
+			//Regex to find address that start with https 
+			var re_absolute_address = new RegExp('^((https?:)?\/\/)');
+			$("a").each(function () {
+				var url = $(this).attr('href');
+				if (re_nist.test(url) || !re_absolute_address.test(url)) {
+					$(this).addClass('local');
+				} else {
+					$(this).addClass('external');
+				}
+			});
+			// Add leaveNotice to external A elements 
+			$('a.external').leaveNotice({
+				siteName: 'NIST CRC-2023',
+			});
+		});
+	</script>
+
+	<!-- NIST CSS -->
+	<link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css">
+	<link rel="stylesheet" href="../static/css/NISTPages.css">
+	<link rel="stylesheet" href="../assets/css/main.css" />
+
+	<!-- NIST Javascript -->
+	<!-- <script src="https://pages.nist.gov/nist-header-footer/js/jquery-1.9.0.min.js" type="text/javascript" defer="defer"></script> -->
+	<script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript"
+		defer="defer"></script>
+
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header-wrap">
+			<header id="header" class="alt">
+				<div>
+					<a style="border-bottom: 0px" href="../index.html">
+						<!-- JESS: REMOVE OR UPDATE
+						<img style="margin-left: 5px; margin-top: 0.45%" width="180px" height="50px"
+							src="../images/crc2025logo.png" />
+					-->
+					</a>
+				</div>
+                <nav id="nav">
+                    <ul>
+						<li><a href="..index.html" class="button">Home</a></li>
+						<li><a href="participate.html" class="button">Participate</a></li>
+						<li><a href="leaderboard.html" class="button">Leaderboard </a></li>
+						<li><a href="submit.html" class="button new">Submit</a></li>
+						<li><a href="techniques.html" class="button">Techniques</a></li>
+						<li><a href="resources.html" class="button">Resources</a></li>
+						<li><a href="connect.html" class="button">Connect</a></li>
+                    </ul>
+                </nav>
+			</header>
+		</div>
+
+		<!-- Main -->
+		<section id="main" class="container">
+			<header id="page-header">
+				<h2>Connect with Us</h2>
+			</header>
+			<ul class="actions special">
+				<li><a href="../index.html" class="button">Home</a></li>
+				<li><a href="participate.html" class="button">Participate</a></li>
+				<li><a href="leaderboard.html" class="button">Leaderboard </a></li>
+				<li><a href="submit.html" class="button new">Submit</a></li>
+				<li><a href="techniques.html" class="button">Techniques</a></li>
+				<li><a href="resources.html" class="button">Resources</a></li>
+				<li><a href="connect.html" class="button primary">Connect</a></li>
+			</ul>
+
+			<div class="box participate separators">
+				<section>
+					<h3><img src="../images/mail.png" height="30" style="vertical-align:text-top"> Email,  
+						<img src="../images/message.png" height="30" style="vertical-align:text-top"> Listserve, 
+						<img src="../images/slack.png" height="30" style="vertical-align:text-top"> Slack 
+						and <img src="../images/officehours.png" height="30" style="vertical-align:text-top"> Office Hours</h3>
+					<section>
+						<h4 style="font-size:larger;"><b>
+							Please feel free to reach out to us!
+						</b></h4>
+						<p>
+							We're happy to answer questions and discuss relevant research, etc.
+						</p>
+						<ul>
+							<li>
+								<a href="mailto:gary.howarth@nist.gov?subject=[CRC]">
+								Email Gary Howarth with Questions
+								</a>
+							</li>
+							<li>
+								<a href="mailto:CRC+subscribe@list.NIST.gov">
+									Join our listserve to be notified of project updates and opportunities
+									(submit an empty email to subscribe)
+								</a>
+							</li>
+							<li>
+								<a href="https://opendp.slack.com/archives/C050A67BPE3">
+									Join our slack channel (hosted by our friends 
+									at OpenDP) to engage with the community:
+								</a>
+							</li>
+							<!--
+								* Join our slack channel (hosted by our friends at OpenDP) to engage with the community:
+							-->
+							<li>
+									Office hours will be announced in Slack (weekly) 
+							</li>
+						</ul>
+					</section>
+				</section>
+	</div>
+
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.dropotron.min.js"></script>
+	<script src="../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

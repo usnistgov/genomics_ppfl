@@ -1,0 +1,855 @@
+<!DOCTYPE HTML>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Connect</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<!--open graph data-->
+	<meta property="og:title" content="Genomics PPFL Platform: 2025 Red Teaming Event" />
+	<meta property="og:description"
+		content="The NIST Privacy Engineering Program has launched the Genomics PPFL Platform: 2025 Red Teaming Event 
+			to direct the research community to explore the complex interaction between model utility, privacy interventions 
+			such as noise and clipping bounds, data distribution, and resilience to membership and data reconstruction 
+			attacks. This will inform consensus guidance on privacy for federated learning collaborations between genomics 
+			researchers." />
+
+	<meta property="og:site_name" content="pages.nist.gov/genomics_ppfl" />
+	<meta property="og:image" content="https://pages.nist.gov/privacy_collaborative_research_cycle/images/image4.png" />
+	<meta property="og:image:alt" content="Genomics PPFL Platform: 2025 Red Teaming Event" />
+	<meta property="og:image:width" content="400" />
+	<meta property="og:image:height" content="300" />
+
+	<script src="../assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../nist_js/leave_notice.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/NISTLeaveNotice.css" />
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			// Mark external (non-nist.gov) A tags with class "external"
+			//If the adress start with https and ends with nist.gov
+			var re_nist = new RegExp('^https?:\/\/((^\/)*\.)*nist\\.gov(\/|$)');
+			//Regex to find address that start with https 
+			var re_absolute_address = new RegExp('^((https?:)?\/\/)');
+			$("a").each(function () {
+				var url = $(this).attr('href');
+				if (re_nist.test(url) || !re_absolute_address.test(url)) {
+					$(this).addClass('local');
+				} else {
+					$(this).addClass('external');
+				}
+			});
+			// Add leaveNotice to external A elements 
+			$('a.external').leaveNotice({
+				siteName: 'NIST CRC-2023',
+			});
+		});
+	</script>
+
+	<!-- NIST CSS -->
+	<link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css">
+	<link rel="stylesheet" href="../static/css/NISTPages.css">
+	<link rel="stylesheet" href="../assets/css/main.css" />
+
+	<!-- NIST Javascript -->
+	<!-- <script src="https://pages.nist.gov/nist-header-footer/js/jquery-1.9.0.min.js" type="text/javascript" defer="defer"></script> -->
+	<script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript"
+		defer="defer"></script>
+
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header-wrap">
+			<header id="header" class="alt">
+				<div>
+					<a style="border-bottom: 0px" href="../index.html">
+						<!-- JESS: REMOVE OR UPDATE
+						<img style="margin-left: 5px; margin-top: 0.45%" width="180px" height="50px"
+							src="../images/crc2025logo.png" />
+					-->
+					</a>
+				</div>
+                <nav id="nav">
+                    <ul>
+						<li><a href="../index.html" class="button">Home</a></li>
+						<li><a href="participate.html" class="button">Participate</a></li>
+						<li><a href="leaderboard.html" class="button">Leaderboard </a></li>
+						<li><a href="submit.html" class="button new">Submit</a></li>
+						<li><a href="techniques.html" class="button">Techniques</a></li>
+						<li><a href="resources.html" class="button">Resources</a></li>
+						<li><a href="connect.html" class="button">Connect</a></li>
+                    </ul>
+                </nav>
+			</header>
+		</div>
+
+		<!-- Main -->
+		<section id="main" class="container">
+			<header id="page-header">
+				<h2>How To Participate</h2>
+				<p>We invite a wide variety of participation: Spend an
+					afternoon to give us a deidentified data sample or a
+					summer exploring a math problem inspired by what we’ve
+					observed in those samples. And we hope to have a wide
+					variety of participants – coders, theorists, and analysts.
+					When we collaborate, we need everyone’s expertise. Look
+					below to find out more about how you can help.</p>
+					<ul class="actions special">
+						<li><a href="../index.html" class="button">Home</a></li>
+						<li><a href="participate.html" class="button">Participate</a></li>
+						<li><a href="leaderboard.html" class="button">Leaderboard </a></li>
+						<li><a href="submit.html" class="button new">Submit</a></li>
+						<li><a href="techniques.html" class="button">Techniques</a></li>
+						<li><a href="resources.html" class="button primary">Resources</a></li>
+						<li><a href="connect.html" class="button primary">Connect</a></li>
+					</ul>
+
+			</header>
+			<div class="box participate separators">
+				<section>
+					<h3>Contents:</h3>
+					<h4>Connect with Us</h4>
+					<ul>
+						<li>
+							<a href="participate.html#connect">
+							Email, Listserve, Slack and Office Hours
+							</a>
+						</li>
+					</ul>
+					<!-- <br><hr> -->
+					<h4>Submit Deidentified Data to the Archive</h4>
+					<ul>
+						<li><a href="participate.html#submit-walkthrough">
+							Data Submission Walkthrough
+						</a></li>
+						<li><a href="participate.html#submit-dp">
+							Publicly Verifiable Differential Privacy Submission Process
+						</a></li>
+					</ul>
+					<h4>Submit Related Research to our Research Directory</h4>
+					<ul>
+						<li><a href="participate.html#research-walkthrough">
+							Research Directory Submission Walkthrough
+						</a></li>
+						<li><a href="participate.html#research-cite">
+							How to Cite CRC Resources
+						</a></li>
+					</ul>
+				</section>
+				<hr>
+				<section>
+					<div>
+						<h3 id="connect">Connect with Us</h3>
+						<section>
+							<h4 style="font-size:larger;"><b>
+								Email, Listserve, Slack and Office Hours
+							</b></h4>
+							<p>
+								Please feel free to reach out to us! 
+								We're happy to answer questions, 
+								provide tours, discuss your relevant research, etc.
+							</p>
+							<ul>
+								<li>
+									<a href="mailto:gary.howarth@nist.gov?subject=[CRC]">
+									Email Gary Howarth with Questions
+									</a>
+								</li>
+								<li>
+									<a href="mailto:CRC+subscribe@list.NIST.gov">
+										Join our listserve to be notified of project updates and opportunities
+										(submit an empty email to subscribe)
+									</a>
+								</li>
+								<li>
+									<a href="https://opendp.slack.com/archives/C050A67BPE3">
+										Join our slack channel (hosted by our friends 
+										at OpenDP) to engage with the community:
+									</a>
+								</li>
+								<!--
+									* Join our slack channel (hosted by our friends at OpenDP) to engage with the community:
+								-->
+							</ul>
+						</section>
+					</div>
+				</section>
+				<hr>
+				<section>
+					<div>
+						<h3>Submit Deidentified Data to the Archive</h3>
+						<section id="submit-walkthrough">
+							<h4 style="font-size:larger;"><b>
+								Data Submission Walkthrough
+							</b></h4>
+							<p>
+								When you submit data to the archive, 
+								your work will contribute to solving 
+								problems with deidentified data generation. We will include your 
+								technique in our 
+								<a href="techniques.html">
+									Techniques Directory
+								</a>
+
+								 and on our 
+								 <a href="archive.html#algorithm-summary">
+									Algorithm Summary Table
+								</a>
+								, we'll provide you 
+								with an 
+								<a href="https://github.com/usnistgov/SDNist/tree/main/sdnist/report/sample-reports">
+									SDNist
+								</a>
+								report
+								on your utility and privacy performance, 
+								and you'll be encouraged to 
+								<a href="participate.html#connect">
+									join us for an office hour or 1-1 meeting
+								</a> 
+								 to 
+								discuss your evaluation results. 
+							</p>
+							<section>
+								<p><b>Do I need to be a privacy expert? :</b>
+									Nope! We want participants both inside and outside the
+									privacy research community. There are a lot of easy-to-use
+									tools out there aimed for the general public,
+									and we’d like to know how they perform just as much as
+									we’d like to understand recent research innovations.
+								</p>
+								<p><b>What's a submission? :</b>
+									To make a deidentified-data submission, first pick a
+									privacy technique and a feature subset.
+									Then, run the privacy technique on the data with the feature subset you chose.
+									You can include multiple files in a data submission to try out different
+									parameter settings on your privacy technique.
+								</p>
+								<p><b>Can I make more than one submission? :</b>
+									Yes! The more techniques and feature sets you try out,
+									the more we’ll have, and that’s what we want.
+									Your team will be given credit for everything you submit,
+									and you can even attach a team logo to your submission if you like.
+								</p>
+								<p><b>What data? :</b>
+									<a
+										href="https://github.com/usnistgov/SDNist/tree/main/BenchmarkData">
+										Here is the benchmark data we’d like you to deidentify for us.</a>
+									We have three benchmark datasets in the ACS Data Excerpts – the Massachusetts data is from
+									north of Boston, the Texas data is from near Dallas, and the National
+									data is a collection of communities from around the nation.
+									The data is derived from the 2019 American Community Survey; the 24
+									features in the complete scheme were chosen because they capture many
+									of the complexities from real-world data, while still being small,
+									and simple enough to make more formal analysis feasible.
+									The data folder includes lovely postcard documentation about
+									the communities and a JSON data dictionary to make it easy to
+									configure your privacy technique.
+									<a
+										href="https://github.com/usnistgov/SDNist/blob/main/BenchmarkData/README.md">
+										The usage guidance section</a> in the readme
+									has helpful configuration hints <b><i>(watch out for ‘N’)</i></b>.
+								</p>
+								<p><b>What privacy technique? :</b>
+									You can pick one to try from our growing collection
+									on the <a href="techniques.html">
+										Techniques page</a>,
+									take a look at our
+									<a target="_tab"
+										href="https://media.githubusercontent.com/media/usnistgov/SDNist/main/deidentification%20techniques/Open_Source_Techniques_for_Privacy_Newcomers.pdf">
+										list of open-source libraries for privacy newcomers</a>,
+									or you can contribute a new one we don’t have yet.
+									If you submit a new technique
+									(or a different library implementation of one we already have),
+									then the submission form will prompt you for basic information about
+									it: a short name, a one-sentence description,
+									a full algorithm description (optional),
+									and then any links or references that help document it.
+									You’ll also have the option of adding a picture that
+									people can use to identify the technique at a glance.
+									In a few days, you’ll see the technique you contributed added to our website.
+									<b><i>Note – you don’t need to be the creator of a privacy technique
+											to submit data that uses it; just be sure to properly cite the
+											source when prompted.</i></b>
+								</p>
+								<p>
+									<b>What feature set? :</b>
+									The <a
+										href="https://github.com/usnistgov/SDNist/blob/main/BenchmarkData/ACSDataExcerpts/data_dictionary.json">
+										full schema has 24 features</a>,
+									but you often want to focus on just a subset of those.
+									Some privacy algorithms are designed for smaller feature sets,
+									and algorithm analysis may be more approachable on focused subsets.
+									Of course, it’s also important to see how algorithms behave with
+									larger feature sets; the best performing approach on 9 features
+									might be the worst performing one on 21.
+									Here are some options to try out, and you’re welcome
+									to pick your own subset as well.
+									A single data submission should use a single feature subset.
+								</p>
+								<ul class="ul-space-above">
+									<li><b>All Features:</b> <i>Includes all 24 features</i></li>
+									<li><b>Simpler Features:</b> <i>Includes 21 features,</i>
+										<b><i>all except (INDP, WGTP, PWGTP)</i></b>
+									</li>
+									<li><b>Demographic-Focused Subset:</b></li>
+									<!--For desktop-->
+									<table class="alt listtable">
+										<thead>
+											<tr>
+												<th>SEX</th>
+												<th>MSP</th>
+												<th>RAC1P</th>
+												<th>OWN_RENT</th>
+												<th>PINCP_DECILE</th>
+												<th>EDU</th>
+												<th>AGEP</th>
+												<th>HOUSING_TYPE</th>
+												<th>DVET</th>
+												<th>DEYE</th>
+											</tr>
+										</thead>
+									</table>
+									<!--For Mobile-->
+									<table class="alt mobile-listtable">
+										<thead>
+											<tr>
+												<th>SEX</th>
+												<th>MSP</th>
+												<th>RAC1P</th>
+												<th>OWN_RENT</th>
+												<th>PINCP_DECILE</th>
+											</tr>
+										</thead>
+									</table>
+									<table class="alt mobile-listtable">
+										<thead>
+											<tr>
+												<th>EDU</th>
+												<th>AGEP</th>
+												<th>HOUSING_TYPE</th>
+												<th>DVET</th>
+												<th>DEYE</th>
+											</tr>
+										</thead>
+									</table>
+									<li><b>Industry-Focused Subset:</b></li>
+									<!--For desktop-->
+									<table class="alt listtable">
+										<thead>
+											<tr>
+												<th>SEX</th>
+												<th>MSP</th>
+												<th>RAC1P</th>
+												<th>OWN_RENT</th>
+												<th>PINCP_DECILE</th>
+												<th>EDU</th>
+												<th>HISP</th>
+												<th>PUMA</th>
+												<th>INDP_CAT</th>
+											</tr>
+										</thead>
+									</table>
+									<!--For Mobile-->
+									<table class="alt mobile-listtable">
+										<thead>
+											<tr>
+												<th>SEX</th>
+												<th>MSP</th>
+												<th>RAC1P</th>
+												<th>OWN_RENT</th>
+												<th>PINCP_DECILE</th>
+											</tr>
+										</thead>
+									</table>
+									<table class="alt mobile-listtable">
+										<thead>
+											<tr>
+												<th>EDU</th>
+												<th>HISP</th>
+												<th>PUMA</th>
+												<th>INDP_CAT</th>
+											</tr>
+										</thead>
+									</table>
+									<li><b>Detailed Industry Subset:</b></li>
+									<!--For desktop-->
+									<table class="alt listtable">
+										<thead>
+											<tr>
+												<th>SEX</th>
+												<th>MSP</th>
+												<th>RAC1P</th>
+												<th>OWN_RENT</th>
+												<th>PINCP_DECILE</th>
+												<th>EDU</th>
+												<th>HISP</th>
+												<th>PUMA</th>
+												<th>INDP_CAT</th>
+												<th>INDP</th>
+											</tr>
+										</thead>
+									</table>
+									<!--For Mobile-->
+									<table class="alt mobile-listtable">
+										<thead>
+											<tr>
+												<th>SEX</th>
+												<th>MSP</th>
+												<th>RAC1P</th>
+												<th>OWN_RENT</th>
+												<th>PINCP_DECILE</th>
+											</tr>
+										</thead>
+									</table>
+									<table class="alt mobile-listtable">
+										<thead>
+											<tr>
+												<th>EDU</th>
+												<th>HISP</th>
+												<th>PUMA</th>
+												<th>INDP_CAT</th>
+												<th>INDP</th>
+											</tr>
+										</thead>
+									</table>
+									<li><b>Family-Focused Subset:</b></li>
+									<!--For desktop-->
+									<table class="alt listtable">
+										<thead>
+											<tr>
+												<th>SEX</th>
+												<th>MSP</th>
+												<th>RAC1P</th>
+												<th>OWN_RENT</th>
+												<th>PINCP_DECILE</th>
+												<th>HISP</th>
+												<th>PUMA</th>
+												<th>AGEP</th>
+												<th>NOC</th>
+												<th>NPF</th>
+												<th>POVPIP</th>
+											</tr>
+										</thead>
+									</table>
+									<!--For Mobile-->
+									<table class="alt mobile-listtable">
+										<thead>
+											<tr>
+												<th>SEX</th>
+												<th>MSP</th>
+												<th>RAC1P</th>
+												<th>OWN_RENT</th>
+												<th>PINCP_DECILE</th>
+											</tr>
+										</thead>
+									</table>
+									<table class="alt mobile-listtable">
+										<thead>
+											<tr>
+												<th>HISP</th>
+												<th>PUMA</th>
+												<th>AGE</th>
+												<th>NOC</th>
+												<th>NPF</th>
+												<th>POVPIP</th>
+											</tr>
+										</thead>
+									</table>
+									<li><b>Small Categorical: </b></li>
+									<table class="alt listtable" style="width: 65%">
+										<thead>
+											<tr>
+												<th>SEX</th>
+												<th>RAC1P</th>
+												<th>OWN_RENT</th>
+												<th>PINCP_DECILE</th>
+												<th>PUMA</th>
+											</tr>
+										</thead>
+									</table>
+									<li><b>Tiny Categorical: </b></li>
+									<table class="alt listtable" style="width: 20%">
+										<thead>
+											<tr>
+												<th>RAC1P</th>
+												<th>PUMA</th>
+											</tr>
+										</thead>
+									</table>
+								</ul>
+								<br>
+								<p><b>How do I submit? :</b></p>
+								<ol type="1">
+									<li>Have you registered your team?
+										<a
+											href="https://docs.google.com/forms/d/e/1FAIpQLSde8IklaZFEXlCBb0g_EVh6rf7tyxfCsB5yieZ-8hBomlRTGQ/viewform?usp=sf_link">
+											Do that first.</a>
+									</li>
+									<li>Prepare your deidentified data samples, with your
+										chosen technique and feature set.
+										Your submission can include multiple data files
+										(up to 10) to explore running the technique with
+										different parameter configurations or target datasets
+										(MA, TX, or National).</li>
+									<li><a
+											href="https://docs.google.com/forms/d/e/1FAIpQLSfv5b_2R8iwZ6SJC7G2U6uGGtyPrNX1HfK-gXEmxSLRx8xOSA/viewform?usp=sf_link">
+											Use the google form here to submit.</a>
+										It will ask you for contact info and team name,
+										technique and feature set, and ask you some
+										questions about what you did to prepare the submission
+										– what privacy the technique provides and what
+										parameter configurations you explored.
+										You’ll also have the option to upload an
+										image to go with your submission and
+										provide any additional links or references you think we should have.</li>
+									<li>If you’re using a custom technique that satisfies
+										differential privacy, decide if you’d like to
+										<a href="participate.html#special-process-header">
+											Assert Publicly Verifiable Differential Privacy</a>.
+										If so, you’ll need to submit some supplementary material
+										to help others verify that your approach correctly satisfies
+										your stated differential-privacy guarantee.
+									</li>
+								</ol>
+							</section>
+						</section>
+						<br>
+						<br>
+						<br>
+						<section id="submit-dp">
+							<h4 style="font-size:larger;"><b>
+								Publicly Verifiable Differential Privacy Submission Process
+							</b></h4>
+							<section>
+								<div>
+									<!-- <h4><b>
+										Publicly Verifiable Differential Privacy - Special Submission Process
+									</b></h4> -->
+									<p>In the <a
+											href="https://www.drivendata.org/competitions/76/competition-differential-privacy-maps-3/page/329/#overview">
+											NIST Synthetic Data Challenges</a>, NIST provided a
+										Subject-Matter-Expert
+										<a
+											href="https://www.drivendata.org/competitions/76/competition-differential-privacy-maps-3/page/329/#pre-screening-write-up">differential-privacy
+											validation process</a>.
+										For the Collaborative Research Cycle, we will be doing something
+										more transparent and collaborative instead.
+										If you would like to assert that your submission
+										technically satisfies Publicly Verifiable Differential
+										Privacy, then read more here.
+									</p>
+									<p><b>Should I participate?</b></p>
+									<ul>
+										<li>Participation is optional: You are welcome to
+											describe your technique as differentially private
+											in the submission form without participating in
+											the Publicly Verified Differential Privacy track,
+											and that’s fine! It just won’t be publicly verified.
+										</li>
+										<li>
+											In particular, if you’re using a tool from a well-known
+											differentially private library, and you haven’t
+											added any of your own code, then you don’t need to submit
+											for public verification.
+										</li>
+										<li>
+											However, if you’re relatively new to differential privacy,
+											and you’re writing some of your own code, it’s a great idea
+											to submit for verification.
+										</li>
+										<li>
+											And if you’ve been in the differential-privacy
+											research community for quite a while, then it’s
+											an even better idea to submit for verification.
+											This will make it easier for other DP researchers
+											to find your work in the archive, and more eyes on
+											source code is almost always a good idea.
+										</li>
+									</ul>
+									<p></p>
+									<p>
+										<b>What do I need to participate?</b>
+									</p>
+									<ul>
+										<li>
+											On the submission form, you can check that you’d
+											like to assert Publicly Verifiable Differential Privacy.
+											Then you’ll be prompted to submit a few additional items.
+											<b><i>Note that all of these items will be shared publicly as
+													part of the public verification process.</i></b>
+										</li>
+										<li>
+											<b>Source Code: </b>
+											You will need to link to a public code repository
+											where your source code can be reviewed.
+										</li>
+										<li>
+											<b>Privacy Proof and Code Guide Document: </b>
+											You will need to upload a written document that
+											(1) includes a step-by-step walkthrough of your algorithm,
+											(2) states where to find each of the steps in the source code, and
+											(3) has a proof that this algorithm satisfies differential privacy
+											for your chosen DP variant.
+											Note – if you’re new to DP, or even if you’re not,
+											it helps to be very methodical about tracking the
+											sensitivity of each of your steps.
+											This is a different writing style than you’d use for a
+											publication; we’re looking for something simple and unambiguous.
+										</li>
+										<li>
+											<b>Execution Instructions: </b>
+											Provide instructions for someone to run your code and reproduce
+											the results you got in the data that you’re submitting.
+										</li>
+										<li>
+											<b>Tuning Approach: </b>
+											This is a quick multiple-choice question in the form
+											– when you were developing (testing and configuring)
+											your technique, did you use any version of the benchmark data?
+											To very strictly preserve privacy, it’s best not to use the
+											private data during development because it could leak information
+											that’s not protected by the privacy guarantee. Options include:
+											<ul>
+												<li>No data was used for development (default, blind, or privacy-preserving
+													configuration).</li>
+												<li>TX & MA data were used during development, but the submission
+													was run on the National data (in this case, TX & MA are
+													considered public development data, and the National
+													data is considered the private dataset).</li>
+												<li>The same target data was used during development
+													and for the submission (this is less strict about preserving privacy,
+													but it is just fine for many practical purposes
+													– however, because it provides a performance advantage,
+													it’s important to note this.)</li>
+												<li>Other (if you’ve done something else, let us know).</li>
+											</ul>
+										</li>
+										<li>
+											<b>Public Point of Contact: </b>
+											Provide the email of the person who should be
+											contacted if anyone has questions about your approach.
+										</li>
+									</ul>
+									<p></p>
+									<p>
+										<b>What can I expect to occur?</b>
+									</p>
+									<ul>
+										<li>
+											The Publicly Verifiable Differential Privacy track is what
+											it sounds like: we’ll package these techniques and present
+											them to the public for verification.
+										</li>
+										<li>
+											The verification might be empirical, formal, or informal.
+											We’ll be actively encouraging engagement from researchers
+											whose work focuses on validating differential-privacy techniques.
+										</li>
+										<li>
+											Within the constraints of available time, we’ll also provide
+											our own informal review and feedback on any issues we uncover.
+										</li>
+										<li>
+											If you receive feedback that uncovers issues with your
+											technique, you can address them and submit an updated
+											algorithm and sample data.
+										</li>
+									</ul>
+								</div>
+							</section>
+						</section>
+					</div>
+				</section>
+				<hr>
+				<section>
+					<div>
+						<h3>Submit Related Research to our Research Directory</h3>
+						<section id="research-walkthrough">
+							<h4 style="font-size:larger;"><b>
+								Research Directory Submission Walkthrough
+							</b></h4>
+							<p>
+								In addition to a 
+								directory of deidentification techniques 
+								, we also maintain 
+								a  
+									directory of individuals and groups doing
+									related research
+								using CRC resources. If you've been making 
+								use of CRC resources, we'd love to include you!
+							</p>
+							<p>
+								<a href="research.html#related-research">
+								The Related Research Directory 
+								</a>
+							exists 
+								to help researchers find each other 
+								and make use of each other's insights. 
+								Because everyone in the directory has 
+								work referencing the same set of 
+								benchmark data, its often easier 
+								to build on other's observations 
+								and make substantial progress together. 
+								To be included in the directory, 
+								we only need the following 
+								<a href="participate.html#connect">
+									(provide by email or during an office hour)
+								</a>
+								:
+								<ul>
+									<li>
+										<b>Name:</b> (individual or group name)
+									</li>
+									<li>
+										<b>Description:</b> 1-2 sentences describing the individual or group, such as research focus,  affiliation(s), etc
+									</li>
+									<li>
+										<b>URL:</b> 1-2 reference links for the group (website, arXiv paper, github, discord)
+									</li>
+									<li>
+										<b>CRC Related Work:</b> 
+										A list of any publicly available work that 
+										cites CRC resources. Possibilities include 
+										arXiv preprints, commercial whitepapers, 
+										government technical reports, code or data 
+										analytics notebooks--- anything publicly 
+										available that documents your observations 
+										of CRC resources which might be relevant for 
+										other researchers. Please see below for 
+										information on the definition of CRC related 
+										work and how to cite CRC resources.
+									</li>
+									<li>
+										<b>Group Type:</b> 
+										Academic (including students), 
+										Government, Industry, Individual/Recreational
+									</li>
+									<li>
+										<b>Point of Contact:</b> 
+										How can other researchers contact you?  
+										Individual or group email address, or 
+										website with a contact form.
+									</li>
+									<li>
+										<b>[optional] List of Group Members:</b> 
+										Anyone in your group working on CRC related 
+										research that you'd like included in the directory
+									</li>
+									<li>
+										<b>[optional] Keywords:</b> 
+										A list of keywords for the group's research 
+										focus, to make it easier for us to organize 
+										groups and make it easier for others to find you.
+									</li>
+									<li>
+										<b>[optional] Image:</b> 
+										An icon or image you'd like to use for your group.  
+										If you don't provide one, we'll use an excerpt 
+										from your CRC Related Work.
+									</li>
+								</ul>
+							</p>
+						</section>
+						<br>
+						<section id="research-cite">
+							<h4 style="font-size:larger;"><b>
+								How to Cite CRC Resources
+							</b></h4>
+							<p>
+								We define "CRC Related Research" to 
+								be work that uses (and cites) any 
+								of the resources available on the 
+								<a href="archive.html">
+									Data and Tools page.
+								</a>
+								This includes the benchmark data, 
+								the SDNist Evaluation Tool, 
+								the Deidentified Data Archive 
+								(including the Algorithm Summary 
+								Table, Data and Metrics Archive, 
+								or Meta-report Archive), 
+								the meta-analysis notebooks and 
+								the Pairwise PCA Exploration Tool.
+							</p>
+
+							<p>
+								Below we provide guidance for citing our data and code resources:
+							</p>
+							<section>
+								<ul>
+									<li>
+										<h4>If you publish work that utilizes the SDNist Deidentified Data Tool, 
+											please cite the software. Citation recommendation:</h4>
+										<blockquote>
+											Task C., Bhagat K., and Howarth G.S. (2023), SDNist v2: 
+											Deidentified Data Report Tool, National Institute of Standards and 
+											Technology, <a href="https://doi.org/10.18434/mds2-2943">https://doi.org/10.18434/mds2-2943</a>.
+											<br>
+											<br>
+											bibtex:
+											@misc{task_sdnist_2023,
+												author = {Task, Christine and Bhagat, Karan and Howarth, Gary},
+												doi = {10.18434/MDS2-2943},
+												month = mar,
+												publisher = {National Institute of Standards and Technology},
+												shorttitle = {{SDNist} v2},
+												title = {{SDNist} v2: {Deidentified} {Data} {Report} {Tool}},
+												url = {https://data.nist.gov/od/id/mds2-2943},
+												year = {2023}}
+										</blockquote>
+									</li>
+									<li>
+										<h4> If you publish work that utilizes the NIST Excerpts Benchmark Data, please cite the resource. Citation recommendation:</h4>
+										<blockquote>Task C., Bhagat K., Streat D., and Howarth G.S. (2023), NIST Excerpts Benchmark Data, National 
+											Institute of Standards and Technology, 
+											<a href="https://doi.org/10.18434/mds2-2895">https://doi.org/10.18434/mds2-2895</a>.
+											<br>
+											<br>
+											bibtex:
+											@misc{task_nist_2022,
+												author = {Task, Christine and Bhagat, Karan and Damon, Streat and Howarth, Gary},
+												doi = {10.18434/MDS2-2895},
+												month = dec,
+												publisher = {National Institute of Standards and Technology},
+												title = {{NIST} {Excerpts} {Benchmark} {Data}},
+												url = {https://data.nist.gov/od/id/mds2-2895},
+												year = {2022}}
+											<br></blockquote>
+									</li>
+								</ul>
+							</section>
+						</section>
+					</div>
+				</section>
+				<hr>
+		<footer id="footer">
+
+			<p>This website uses:</p>
+
+			<p>| &nbsp<a href="https://html5up.net/alpha">
+					Alpha Template</a> from <a href="https://html5up.net/">HTML5UP</a> &nbsp|</p>
+			<p>| &nbsp<a href="attributions.html">Detailed Attributions</a> &nbsp|</p>
+		</footer>
+	</div>
+
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.dropotron.min.js"></script>
+	<script src="../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
