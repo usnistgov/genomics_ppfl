@@ -97,7 +97,7 @@ https://pages.nist.gov/privacy_collaborative_research_cycle/
 					</div>
 					<br>
 					<h2>Genomics PPFL Platform</h2>
-					<h2><i>2025 Red Teaming Event</i></h2>
+					<h2>2025 Red Teaming Event</h2>
 					<p>Welcome to the homepage of the Genomics PPFL Platform, hosted by the 
 						<a href="https://www.nist.gov/itl/applied-cybersecurity/privacy-engineering">
 							NIST Privacy Engineering Program.</a></p>
@@ -118,89 +118,39 @@ https://pages.nist.gov/privacy_collaborative_research_cycle/
 
 					<section class="box special">
 						<header class="major">
-							<h2>Understanding Privacy Preserving Federated Learning</h2>
+							<h2>NIST launches new privacy red-teaming tasks. <br>Will you accept the challenge? 
+							</h2>
 							<p>The 
 								<a href="https://www.nist.gov/itl/applied-cybersecurity/privacy-engineering">
-									NIST Privacy Engineering Program</a> has launched the Genomics PPFL Platform: 2025 
-									Red Teaming Event to direct the research community to explore the complex interaction 
-									between model utility, privacy interventions such as noise and clipping bounds, data 
-									distribution, and resilience to membership and data reconstruction attacks. This will 
-									inform consensus guidance on privacy for federated learning collaborations between 
-									genomics researchers.
+									NIST Privacy Engineering Program</a> and the National Cybersecurity Center of Excellence are pleased to 
+									invite the public to participate in privacy red-teaming exercises. Privacy-enhancing technologies such 
+									as synthetic data and federated-learning promise to unlock sensitive data stores for research and machine 
+									learning while limiting exposure of private information. Come help us test the efficacy of PETs applied 
+									to two model problems.
+
+							</p>
+							<p style="font-size:24px;">
+								<img src="../images/communication.png" height="30" style="vertical-align:middle">
+								<a href="https://meet.google.com/rxh-csab-jue">Join our webinar</a> 
+									introducing the opportunity 10 MAR 2025 at 11AM ET.
 							</p>
 						</header>
-						<span class="image featured"></span>
 					</section>
+
 					<div class="box">
-						<h3>Program Purpose and Introduction</h3>
+						<h3>Model Problem 1: Differentially private synthetic demographic data</h3>
 						<p>
-							The most interesting research problems happen in cycles. 
-							First there is the idea, then  engineering to implement 
-							the idea on a real-world use case, followed by engagement 
-							with real-world experts, and then that feedback is what 
-							spurs us to look more carefully at the problem and realize 
-							its true complexity. Each iteration of this collaborative 
-							research cycle leads to more valuable and foundational research.
+							Differentially private synthetic data is an increasingly common way to release statistics. The Collaborative Research Cycle 
+							(CRC) has since benchmarked nearly 500 ‘de-identified’ synthetic data samples.  But are they really deidentified?  Or could 
+							you re-identify them (reconstruct targeted individuals’ correct attribute values) if you really tried? Here's your chance!
 						</p>
-						<p>The <a href="https://www.nist.gov/ctl/pscr/open-innovation-prize-challenges/past-prize-challenges
-							/2020-differential-privacy-temporal">NIST Differential Privacy Challenge Series</a> 
-							saw huge gains in synthetic data generation performance and the publication of 
-							a variety of open source tools. Yet, realistic evaluation and benchmarking for 
-							deidentified data (synthetic and other techniques) remains difficult. 
-							NIST seeks to assist the research community by releasing new data and 
-							evaluation tools, drawn from real-world expertise, designed to more deeply 
-							understand data deidentification techniques and their behavior on challenging, real-world data.  
+						<h3>Model Problem 2: Federated learning over silos of genomic data</h3>
+
+						<p>Federated learning supports distributed research in cancer, biotech, and beyond, but privacy-preserving federated learning 
+							(PPFL) is hard.  We've implemented a differentially private PPFL network. Can you determine who in the data and who are not? 
+							What epsilon do you need to protect the individual records and client IP?  
 						</p>
-						<p>The 
-							<a href="https://github.com/usnistgov/SDNist/tree/main/BenchmarkData">
-							NIST ACS Data Excerpts</a> are 
-							real-world, limited-feature data (24 columns), drawn from 
-							the American Community Survey and divided into three distinct 
-							geographic partitions. The complimentary 
-							<a href="https://github.com/usnistgov/SDNist">
-								SDNist Deidentified Data Report Generator</a> 
-							provides a suite of both machine- and human-readable 
-							outputs with more than ten metrics, including univariate 
-							and multivariate statistics, database distance metrics, 
-							principal component analysis, propensity, basic privacy 
-							evaluation, and other information-rich tools 
-							(<a href="https://github.com/usnistgov/SDNist/tree/main/sdnist/report/sample-reports">
-								see examples here</a>). 
-						</p>
-						<p>
-							The CRC collects, evaluates, and packages contributed 
-							NIST ACS Data Excerpts as a <a href= "https://github.com/usnistgov/privacy_collaborative_research_cycle/" style="color: var(--alt-text-color);">  research acceleration bundle</a>. 
-							The CRC plan to update the acceleration bundle at least once during the program 
-							to allow for on-going submissions.
-							The CRC invites researchers to use this <a href= "https://github.com/usnistgov/privacy_collaborative_research_cycle/" style="color: var(--alt-text-color);">  research acceleration bundle</a>.   for investigation, comparison, and 
-							analysis and to submit their findings to a workshop.
-						</p>
-						<p>
-							<p>							The original NIST ACS Data Excerpts released in 2023 has only 24 features and 
-							40K records, and is designed to support the fine grained analysis of the 
-							behavior of data deidentification algorithms. In two years since then 
-							we've seen significant advances in the state of synthetic data generation, 
-							including some incredibly robust high fidelity performance--on our 24 feature 
-							excerpt data. Check out our <a href="pages/archive.html#algorithm-summary">
-							algorithms summary table</a> and data and 
-							<a href="link">metrics archive</a> to see all of the results for yourself. 
-							</p>
-							<p>
-							In 2025 we now have two additional questions: How well do these algorithms scale 
-							to larger data?  And, are they providing genuinely good protection against 
-							sophisticated reidentification attacks?  
-							We've added the <a href="https://github.com/usnistgov/SDNist/tree/main/BenchmarkData">NIST SBO Data Excerpts</a> to 
-							the NIST Excerpts Benchmarks collection, to provide a 
-							platform for stress-testing successful methods on much larger 
-							schema (130 features) and data sets (161K records).  
-							</p>
-							<p>
-							We'll be using both Excerpts (the ACS and SBO) in a 
-							<a href="pages/red_team.html">Community Red Team</a> exercise launching in March 2025 
-							to explore the privacy protection of selected high performing algorithms 
-							in the CRC deidentified data archive.  Can you hack the CRC? 
-							</p>
-						</p>
+
 						<div class="row">
 
 							<div class="row-6 row-12-mobilep">
@@ -208,8 +158,8 @@ https://pages.nist.gov/privacy_collaborative_research_cycle/
 								<!-- JESS: UPDATE WITH A REAL LIST-SERV address -->
 								 <!-- JESS: IS GARY THE CONTACT? -->
 								<p >Please contact NIST scientist 
-									<a href="mailto:gary.howarth@nist.gov?subject=[CRC]">Gary Howarth</a> or 
-									crowd-source them by <a href="mailto:CRC+subscribe@list.NIST.gov">
+									<a href="mailto:gary.howarth@nist.gov?subject=[Genomics PPFL Platform: Red Team Event]">Gary Howarth</a> or 
+									crowd-source them by <a href="mailto:PPFL+subscribe@list.NIST.gov">
 										joining the Genomics PPFL list-serv</a>
 										(submit an empty email to subscribe).
 									</p>
@@ -274,6 +224,7 @@ https://pages.nist.gov/privacy_collaborative_research_cycle/
 				</section>
 
 			<!-- CTA -->
+			 <!-- JESS: UPDATE OR REMOVE THIS -->
 				<section id="cta">
 					<h2><a style="color: white; border-bottom: 0px;" 
 						href="https://github.com/usnistgov/SDNist">Download SDNist Version 2</a></h2>
@@ -296,7 +247,7 @@ https://pages.nist.gov/privacy_collaborative_research_cycle/
 					<p>|  &nbsp<a href="https://html5up.net/alpha">
 						Alpha Template</a> from <a href="https://html5up.net/">HTML5UP</a>  &nbsp|</p>
 					<p>|  &nbspImages from <a href="https://www.flaticon.com/">flaticon.com</a>  &nbsp|</p>
-					<p>|  &nbsp<a href="pages/attributions.html">Detailed Attributions</a>  &nbsp|</p>
+					<p>|  &nbsp<a href="../pages/attributions.html">Detailed Attributions</a>  &nbsp|</p>
 				</footer>
 		</div>
 
