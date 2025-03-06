@@ -1,0 +1,357 @@
+<!DOCTYPE HTML>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Resources</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<!--open graph data-->
+	<meta property="og:title" content="Genomics PPFL Platform: 2025 Red Teaming Event" />
+	<meta property="og:description"
+		content="The NIST Privacy Engineering Program has launched the Genomics PPFL Platform: 2025 Red Teaming Event 
+			to direct the research community to explore the complex interaction between model utility, privacy interventions 
+			such as noise and clipping bounds, data distribution, and resilience to membership and data reconstruction 
+			attacks. This will inform consensus guidance on privacy for federated learning collaborations between genomics 
+			researchers." />
+
+	<meta property="og:site_name" content="pages.nist.gov/genomics_ppfl" />
+	<meta property="og:image" content="https://pages.nist.gov/privacy_collaborative_research_cycle/images/image4.png" />
+	<meta property="og:image:alt" content="Genomics PPFL Platform: 2025 Red Teaming Event" />
+	<meta property="og:image:width" content="400" />
+	<meta property="og:image:height" content="300" />
+
+	<script src="../assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../nist_js/leave_notice.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/NISTLeaveNotice.css" />
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			// Mark external (non-nist.gov) A tags with class "external"
+			//If the adress start with https and ends with nist.gov
+			var re_nist = new RegExp('^https?:\/\/((^\/)*\.)*nist\\.gov(\/|$)');
+			//Regex to find address that start with https 
+			var re_absolute_address = new RegExp('^((https?:)?\/\/)');
+			$("a").each(function () {
+				var url = $(this).attr('href');
+				if (re_nist.test(url) || !re_absolute_address.test(url)) {
+					$(this).addClass('local');
+				} else {
+					$(this).addClass('external');
+				}
+			});
+			// Add leaveNotice to external A elements 
+			$('a.external').leaveNotice({
+				siteName: 'NIST PPFL-2025',
+			});
+		});
+	</script>
+
+	<!-- NIST CSS -->
+	<link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css">
+	<link rel="stylesheet" href="../static/css/NISTPages.css">
+	<link rel="stylesheet" href="../assets/css/main.css" />
+
+	<!-- NIST Javascript -->
+	<!-- <script src="https://pages.nist.gov/nist-header-footer/js/jquery-1.9.0.min.js" type="text/javascript" defer="defer"></script> -->
+	<script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript"
+		defer="defer"></script>
+
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header-wrap">
+			<header id="header" class="alt">
+				<div>
+					<a style="border-bottom: 0px" href="../index.html">
+						<!-- JESS: REMOVE OR UPDATE
+						<img style="margin-left: 5px; margin-top: 0.45%" width="180px" height="50px"
+							src="../images/crc2025logo.png" />
+					-->
+					</a>
+				</div>
+                <nav id="nav">
+                    <ul>
+						<li><a href="../index.html" class="button">Home</a></li>
+						<li><a href="problem.html" class="button">Problem Statement</a></li>
+						<li><a href="leaderboard.html" class="button">Leaderboard </a></li>
+						<li><a href="submit.html" class="button new">Submit</a></li>
+						<li><a href="techniques.html" class="button">Techniques</a></li>
+						<li><a href="resources.html" class="button primary">Resources</a></li>
+						<li><a href="connect.html" class="button">Connect</a></li>
+                    </ul>
+                </nav>
+			</header>
+		</div>
+
+		<!-- Main -->
+		<section id="main" class="container">
+			<header id="page-header">
+				<h2>Resources</h2>
+				<p>Below is a directory of resources. The directory is not comprehensive and inclusion is not an endorsement 
+					from NIST. 
+					<br><i>If you would like to suggest a resource to be added, please contact NIST scientist 
+					<a href="mailto:gary.howarth@nist.gov,PrivacyEng@nist.gov?subject=[Genomics PPFL Platform: Red Team Event]">Gary Howarth</a></i>.
+					<ul class="actions special">
+						<li><a href="../index.html" class="button">Home</a></li>
+						<li><a href="problem.html" class="button">Problem Statement</a></li>
+						<li><a href="leaderboard.html" class="button">Leaderboard </a></li>
+						<li><a href="submit.html" class="button new">Submit</a></li>
+						<li><a href="techniques.html" class="button">Techniques</a></li>
+						<li><a href="resources.html" class="button primary">Resources</a></li>
+						<li><a href="connect.html" class="button primary">Connect</a></li>
+					</ul>
+
+			</header>
+			<div class="box participate separators">
+				<section>
+					<h3>Contents:</h3>
+					<h4><b>Open Source Attack Libraries:</b></h4>
+
+					<a href="https://github.com/Trusted-AI/adversarial-robustness-toolbox"><b><i></i>(Adversarial Robustness Toolbox)</b></a>
+					<ul>
+						<li>Membership Inference (Black Box) (DT, NN)</li>
+						<li>Attribute Inference (Black Box) (DT, NN)</li>
+						<li>Attribute Inference (white box) (scikit DT)</li>
+						<li>
+							<a href="https://github.com/Trusted-AI/adversarial-robustness-toolbox/tree/main/art/attacks/inference/model_inversion">
+							Model Inversion (White Box) (NN)
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/Trusted-AI/adversarial-robustness-toolbox/blob/main/art/attacks/inference/reconstruction/white_box.py">
+							Row Reconstruction (White Box) (DT, NN)
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/Trusted-AI/adversarial-robustness-toolbox/wiki/ART-Attacks">
+							Other Attacks
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/Trusted-AI/adversarial-robustness-toolbox/wiki/ART-Estimators">
+							Supported Estimators  Not all estimators work with all attacks.
+							</a>
+						</li>
+					</ul>
+					
+					<a href="https://github.com/privacytrustlab/ml_privacy_meter/tree/295e7e37e889e12df4083b812f71ed2e2ddd8b4a"><b>ML Privacy meter</b></a>
+					<ul>
+						<li>
+							<a href="https://github.com/privacytrustlab/ml_privacy_meter/tree/295e7e37e889e12df4083b812f71ed2e2ddd8b4a/docs">
+							Membership Inference</a> (Black Box) (NN)  
+							<a href="https://github.com/privacytrustlab/ml_privacy_meter/blob/295e7e37e889e12df4083b812f71ed2e2ddd8b4a/privacy_meter/metric.py">
+								[Metrics Module]</a>
+						</li>
+						<li>
+							<a href="https://github.com/privacytrustlab/ml_privacy_meter/blob/295e7e37e889e12df4083b812f71ed2e2ddd8b4a/privacy_meter/model.py">
+							Supported Estimators  These can be extended easily to support other estimators.
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/privacytrustlab/ml_privacy_meter/blob/master/attacks.py">
+							Reference MI attacks
+							</a>
+						</li>
+					</ul>
+
+					<a href="https://github.com/tensorflow/privacy"><b>Tensorflow-privacy</b></a>
+					<ul>
+						<li>
+							<a href="hhttps://www.tensorflow.org/responsible_ai/privacy/tutorials/privacy_report">
+							Membership Inference</a> (Black Box) (NN)  
+							<a href="https://github.com/tensorflow/privacy/tree/master/tensorflow_privacy/privacy/privacy_tests/membership_inference_attack">
+							[(All membership attacks)</a>
+						</li>
+						<li>
+							<a href="https://github.com/tensorflow/privacy/tree/master/tensorflow_privacy/privacy/privacy_tests/secret_sharer">
+							Secret Sharer Attack</a> (White Box) (NN)
+						</li>
+					</ul>
+
+					<a href="https://github.com/trailofbits/PrivacyRaven"><b>Privacy Raven</b></a>
+					<ul>
+						<li>
+							<a href="https://github.com/trailofbits/PrivacyRaven/tree/master/src/privacyraven">
+							Attacks</a>
+						</li>
+					</ul>
+
+					<!-- <br><hr> -->
+					
+					<h4><b>Research Codebases:</b></h4>
+					
+					<a href="https://github.com/bargavj/EvaluatingDPML/tree/2f611fd20b4089019223039d95efa70a49c2b320">
+						<b>EvaluatingDPML</b></a>
+					<ul>
+						<li>
+							<a href="https://github.com/bargavj/EvaluatingDPML/blob/2f611fd20b4089019223039d95efa70a49c2b320/improved_mi/main.py">
+							Membership Inference</a> (Black Box) (NN)
+						</li>
+						<li>
+							<a href="https://github.com/bargavj/EvaluatingDPML/blob/2f611fd20b4089019223039d95efa70a49c2b320/improved_ai/main.py">
+							Attribute InferenceSecret Sharer Attack</a> (Black Box And White Box) (NN)
+						</li>
+					</ul>
+
+					<a href="https://github.com/inspire-group/membership-inference-evaluation">
+						<b>Membership Inference Evaluation</b></a>
+					<ul>
+						<li>
+							<a href="https://arxiv.org/pdf/2003.10595">
+							Paper</a>
+						</li>
+						<li>
+							<a href="https://github.com/inspire-group/membership-inference-evaluation/blob/master/membership_inference_attacks.py">
+								Membership Inference</a> (Black Box) (NN)
+						</li>
+					</ul>
+
+					<a href="https://github.com/Koukyosyumei/AIJack">
+						<b>AIJack</b></a>
+					<ul>
+						<li>
+							<a href="https://github.com/Koukyosyumei/AIJack">
+							Supported algorithms</a>
+						</li>
+					</ul>
+
+					<a href="https://secml.readthedocs.io/en/v0.15/">
+						<b>SecML</b></a>
+					<ul>
+						<li>Evasion and Poisoning attacks only</li>
+					</ul>
+
+					<a href="https://github.com/Liar-Mask/FedMIA/tree/main">
+						<b>FedMIA</b></a>
+					<ul>
+						<li>Membership inference in federated learning settings</li>
+					</ul>
+
+					<a href="https://github.com/JonasGeiping/breaching">
+						<b>Breaching</b></a>
+					<ul>
+						<li>Data reconstruction using gradient</li>
+						<li>
+							<a href="https://github.com/JonasGeiping/breaching/tree/main/examples">
+								Examples</a>
+						</li>
+					</ul>
+
+					<a href="https://github.com/Princeton-SysML/GradAttack/tree/master">
+						<b>GradAttack</b></a>
+					<ul>
+						<li>Data reconstruction using gradients</li>
+					</ul>
+
+					<h4><b>Other Resources:</b></h4>
+					<ul>
+						<li><a href="https://github.com/HongshengHu/membership-inference-machine-learning-literature">
+							Membership Inference Attacks and Defenses on Machine Learning Models Literature
+						</a></li>
+						<li><a href="https://github.com/microsoft/MICO">
+							Membership Inference Competition MICO Microsoft
+						</a></li>
+						<li><a href="https://github.com/stratosphereips/awesome-ml-privacy-attacks">
+							Awesome ML Privacy Attacks (has code links)
+						</a></li>
+						<li><a href="https://arxiv.org/abs/2007.07646">
+							Survey ML Attacks paper
+						</a></li>
+						<li><a href="https://ieeexplore.ieee.org/abstract/document/9758025">
+							Membership attacks on tradition models
+						</a></li>
+						<li><a href="https://arxiv.org/abs/2010.10152">
+							Feature Inference Attack on Model Predictions in Vertical Federated Learning,
+						</a></li>
+						<li><a href="https://github.com/CISec/PPML-Resource">
+							Privacy Preserving Machine Learning Resources
+						</a></li>
+						<li><a href="https://arxiv.org/abs/2004.04676">
+							Overview of Fed Deep Learning Privacy Attacks and Defensive Strategies
+						</a></li>
+						<li><a href="https://github.com/vaikkunth/PrivacyFL">
+							PrivacyFL: A simulator for privacy-preserving and secure federated learning
+						</a></li>
+						<li><a href="https://github.com/git-disl/CPL_attack">
+							Client Privacy Leakage attacks in FL
+						</a></li>
+						<li><a href="https://arxiv.org/abs/2306.08402">
+							Fairness and Privacy-Preserving in Federated Learning: A Survey
+						</a></li>
+						<li><a href="https://github.com/JonasGeiping/invertinggradients">
+							Inverting Gradient in FL
+						</a></li>
+						<li><a href="https://github.com/pasquini-dario/SplitNN_FSHA">
+							Unleashing the Tiger: Inference Attacks on Split Learning
+						</a></li>
+						<li><a href="https://github.com/Jiaqi0602/adversarial-attack-from-leakage/">
+							From Gradient Leakage to Adversarial Attacks in Federated Learning
+						</a></li>
+						<li><a href="https://cmhcbb.github.io/files/COMP6211I/privacy_attack.pdf">
+							Presentation: Privacy attacks on Decision Trees
+						</a></li>
+						<li><a href="http://essay.utwente.nl/97917/7/Meerhof_MA_EEMCS.pdf">
+							Membership Inference Attacks on Federated Horizontal Gradient Boosted Decision Trees
+						</a></li>
+						<li><a href="https://dl.acm.org/doi/full/10.1145/3624010">
+							https://dl.acm.org/doi/full/10.1145/3624010
+						</a></li>
+
+					</ul>
+
+
+
+					
+
+
+
+
+
+
+
+
+
+
+					<h4><b>Membership Inference:</b></h4>
+					<ul>
+						<li><a href="https://arxiv.org/abs/1610.05820">
+							Membership Inference Attacks Against Machine Learning Models
+						</a></li>
+						<li><a href="https://arxiv.org/abs/2402.06289">
+							Evaluating Membership Inference Attacks and Defenses in Federated Learning
+						</a></li>
+					</ul>
+
+					<h4><b>Gradient Attacks:</b></h4>
+					<ul>
+						<li><a href="https://proceedings.neurips.cc/paper/2020/hash/c4ede56bbd98819ae6112b20ac6bf145-Abstract.html">
+							Inverting Gradients - How easy is it to break privacy in federated learning?
+						</a></li>
+
+					</ul>
+
+				</section>
+					<div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.dropotron.min.js"></script>
+	<script src="../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
