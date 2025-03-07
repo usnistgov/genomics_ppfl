@@ -325,18 +325,22 @@
 							attack and some may be harder. </li>
 						<li><b>Relevant records and External records for each client.</b> This is data you can use to train your attack model, see Executing 
 							a Membership Attack for more information. </li>
-						<li><b>Challenge Records.</b> These are the records we want you to attack.  Each record has a unique ID number.   For each record, predict 
+						<li><b>Challenge Records.</b> These are the records we want you to attack.  Each record has a unique index number.   For each record, predict 
 							whether it belongs to client 1, 2, 3, 4 or write 0 if none of the above.</li>
 					</ul>
 
 					<br>
+					We also provide a demonstration notebook that walks through a simple membership inference attack on Client 4, along with  example submission 
+					files.
+					
+					<br>
 					<h3 id="format">Submission format:</h3> 
 					
-					For each of the three privacy settings, submit a Challenge Record Prediction csv file with the challenge record ID’s and your prediction 
+					For each of the three privacy settings, submit a Challenge Record Prediction csv file with the challenge record index number and your prediction 
 					for which client it belongs to: 1, 2, 3, 4 or 0 for none.
 						
 					<br><br>
-					<font style="color:red"><[Example file picture] .  ></font>
+					<img src="../images/example-submission-file.png">
 						
 					<br><br>
 					We’ll also ask you for any references (papers, libraries, etc) relevant to your submission, a short description of your approach, an 
@@ -345,25 +349,31 @@
 					<br><br>
 					<h3 id="schedule">Submission schedule:</h3>
 					
-					We’ll be collecting submissions for three big leaderboard updates during the Phase 1 soybean data problem.  Submit your bets for the 
-					challenge records, and you’ll get back a percentage accuracy on the leaderboard.   
+					The basic problems in each phase are intended to help you get a feel for the data set. For this reason we give you two opportunities to 
+					submit to the leaderboard on the basic problems: an intermediate leaderboard update and a final leaderboard update.   Submit your 
+					predictions for the challenge records by the deadline, and you’ll get back a percentage accuracy on the leaderboard.
 					
 					<br><br>
-					To help you explore possibilities, you can make up to three submissions per leaderboard update, as long as those submissions are using 
-					significantly different techniques/approaches/configurations.   
+					<b><i>Note you can submit up to three attempts for every leaderboard update deadline</i></b>, using different approaches/configurations. 
+					Your team will be scored by your highest performing entry. This gives you a chance to try out multiple libraries or ideas.
 					
 					<br><br>
-					<font style="color:red">[Dates]</font> 
+					<ul>
+						<li>April 1st: Intermediate Leaderboard Deadline (Basic Problem, Phase 1)</li>
+						<li>May 1st: Final Leaderboard Deadline (Basic Problem, Phase 1) </li>
+					</ul>
 						
-					<br><br>
+					<br>
 					We’ll be rating different attack libraries by how successful they are, and sharing what we learn about the overall privacy protection 
-					of different client models.   The goal here isn’t just to get at the top of the leaderboard, it’s to find out together in a realistic 
+					of different client models. The goal here isn’t just to get at the top of the leaderboard, it’s to find out together in a realistic 
 					setting how attacks behave, and how safe these models really are.    
 					
 					<br><br>
 					<h3 id="practice">Practice data:</h3>  
 
-					If you want to check your predictions for Client 1, you can check here if you want to test how you’re doing. 
+					In each problem we'll provide you with some demonstration data; essentially a part of the problem where we give you the answers for 
+					free, so you can try out different techniques locally before you submit. In the Phase I Basic Problem the competitor's pack includes 
+					the membership list for Client 4.
 				</p>
 
 				</section>
