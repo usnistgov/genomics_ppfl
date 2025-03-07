@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Submit</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<!--open graph data-->
+	<meta property="og:title" content="Genomics PPFL Platform: 2025 Red Teaming Event" />
+	<meta property="og:description"
+		content="The NIST Privacy Engineering Program has launched the Genomics PPFL Platform: 2025 Red Teaming Event 
+			to direct the research community to explore the complex interaction between model utility, privacy interventions 
+			such as noise and clipping bounds, data distribution, and resilience to membership and data reconstruction 
+			attacks. This will inform consensus guidance on privacy for federated learning collaborations between genomics 
+			researchers." />
+
+	<meta property="og:site_name" content="pages.nist.gov/genomics_ppfl" />
+	<meta property="og:image" content="https://pages.nist.gov/privacy_collaborative_research_cycle/images/image4.png" />
+	<meta property="og:image:alt" content="Genomics PPFL Platform: 2025 Red Teaming Event" />
+	<meta property="og:image:width" content="400" />
+	<meta property="og:image:height" content="300" />
+
+	<script src="../assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../nist_js/leave_notice.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/NISTLeaveNotice.css" />
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			// Mark external (non-nist.gov) A tags with class "external"
+			//If the adress start with https and ends with nist.gov
+			var re_nist = new RegExp('^https?:\/\/((^\/)*\.)*nist\\.gov(\/|$)');
+			//Regex to find address that start with https 
+			var re_absolute_address = new RegExp('^((https?:)?\/\/)');
+			$("a").each(function () {
+				var url = $(this).attr('href');
+				if (re_nist.test(url) || !re_absolute_address.test(url)) {
+					$(this).addClass('local');
+				} else {
+					$(this).addClass('external');
+				}
+			});
+			// Add leaveNotice to external A elements 
+			$('a.external').leaveNotice({
+				siteName: 'NIST PPFL-2025',
+			});
+		});
+	</script>
+
+	<!-- NIST CSS -->
+	<link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css">
+	<link rel="stylesheet" href="../static/css/NISTPages.css">
+	<link rel="stylesheet" href="../assets/css/main.css" />
+
+	<!-- NIST Javascript -->
+	<!-- <script src="https://pages.nist.gov/nist-header-footer/js/jquery-1.9.0.min.js" type="text/javascript" defer="defer"></script> -->
+	<script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript"
+		defer="defer"></script>
+
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header-wrap">
+			<header id="header" class="alt">
+				<div>
+					<a style="border-bottom: 0px" href="../index.html">
+						<!-- JESS: REMOVE OR UPDATE
+						<img style="margin-left: 5px; margin-top: 0.45%" width="180px" height="50px"
+							src="../images/crc2025logo.png" />
+					-->
+					</a>
+				</div>
+                <nav id="nav">
+                    <ul>
+						<li><a href="../index.html" class="button">Home</a></li>
+						<li><a href="problem.html" class="button">Problem Statements</a></li>
+						<!-- <li><a href="leaderboard.html" class="button">Leaderboard </a></li> -->
+						<li><a href="submit.html" class="button primary">Submit</a></li>
+						<!-- <li><a href="pages/techniques.html" class="button">Techniques</a></li> -->
+						<li><a href="resources.html" class="button">Resources</a></li>
+						<li><a href="connect.html" class="button">Connect</a></li>
+                    </ul>
+                </nav>
+			</header>
+		</div>
+
+		<!-- Main -->
+		<section id="main" class="container">
+			<header id="page-header">
+				<h2>Submit</h2>
+				<p>Please follow the directions below to submit to the red team exercise.
+					<br><i>Thank you for joining us and helping us learn!</i>.
+					<ul class="actions special">
+						<li><a href="../index.html" class="button">Home</a></li>
+						<li><a href="problem.html" class="button">Problem Statements</a></li>
+						<!-- <li><a href="leaderboard.html" class="button">Leaderboard </a></li> -->
+						<li><a href="submit.html" class="button primary">Submit</a></li>
+						<!-- <li><a href="pages/techniques.html" class="button">Techniques</a></li> -->
+						<li><a href="resources.html" class="button">Resources</a></li>
+						<li><a href="connect.html" class="button">Connect</a></li>
+					</ul>
+
+			</header>
+			<div class="box participate separators">
+				<section>
+					<h3>Quick Links (this page):</h3>
+					<ul>
+						<li><a href="#steps">5 Step Directions</a></li>
+						<li><a href="#structure">Notes on the Problem Structure</a></li>
+						<li><a href="#format">Submission Format</a></li>
+						<li><a href="#schedule">Submission Schedule</a></li>
+						<li><a href="#practice">Practice Data</a></li>
+					</ul>
+
+					<br>
+					<h3 id="steps">How to Submit:</h3>
+					<h4><b>Step 1:</b> Sign up for our <a href="mailto:PPFL+subscribe@list.NIST.gov">listserv</a> (submit an empty email to subscribe)</h4>
+					<br>
+					<h4><b>Step 2:</b> <a href="mailto:PPFL+subscribe@list.NIST.gov">Register</a> your team</h4>
+					<br>
+					<h4><b>Step 3:</b> Read the problem statement and download the competitor's pack (links below)</h4>
+					<ul>
+						<li><b>[March-April] Phase 1 Soybean Data ("Don't Spill the Beans!"):</b></li>
+							<ul>
+								<li>Basic Problem: Membership Inference Attack</li>
+								<ul>
+									<li>Launches March 10, runs through May 1</li>
+									<li>Intermediate Leaderboard Deadline: April 1</li>
+									<li style="color:red">Final Leaderboard Deadline: [May 1]</li>
+									<li><a href="problem.html">Problem Statement</a></li>
+									<li style="color:red">Competitor's pack link [github]</li>
+								</ul>
+								<li>Advanced Problem: Reconstruction Attack</li>
+								<ul>
+									<li>Launches April 10, runs through May 1</li>
+									<li style="color:red">Final Leaderboard Deadline: [May 1]</li>
+								</ul>
+							</ul>
+						<li><b>[May-June] Phase 2 Cancer Data:</b></li>
+							<ul>
+								<li style="color:red">Basic Problem: TBA (launches May 9)</li>
+								<li style="color:red">Advanced Problem: TBA (launches June 9)</li>
+							</ul>
+						</li>	
+					</ul>
+					<br>
+					<h4><b>Step 4:</b> Follow the directions in the competitor's pack to prepare your submission</h4>
+					<ul>
+						<li>Check out our <a href="resources.html">resources</a> page for helpful libraries and research.</li>
+						<li>Note you can submit up to three attempts for every leaderboard update deadline, using different 
+						approaches/configurations.  Your team will be scored by your highest performing entry.  This 
+						gives you a chance to try out multiple libraries or ideas.</li>
+					</ul>
+					<br>
+					<h4><b>Step 5:</b> Submit using the correct form for the problem:</h4>
+					<ul>
+						<li>Phase 1, Basic Problem: Membership Attack</li>
+							<ul class="custom-list">
+								<li style="color:red">Intermediate Leaderboard Deadline: April 1</li>
+								<li style="color:red">Final Leaderboard Deadline: May 1</li>
+							</ul>
+					</ul>
+
+					<p>
+					<h3 id="structure">Some Notes on the Problem Structure</h3>
+
+					The basic problems in each phase are intended to help you get a feel for the data set.  For this 
+					reason we give you two opportunities to submit to the leaderboard on the basic problems: an intermediate 
+					leaderboard update and a final leaderboard update.
+					<br><br>
+					To support participants who want to experiment with different libraries and approaches, you can submit up 
+					to three attempts for each leaderboard update (so you can submit up to six total attempts on Basic Problems, 
+					and three total attempts on Advanced Problems).  
+					<br><br>
+					In each problem we'll provide you with some demonstration data; essentially a part of the problem where we 
+					give you the answers for free, so you can try out different techniques locally before you submit.   In the 
+					Phase I Basic Problem the competitor's pack includes the membership list for Client 4.  
+					<br><br>
+					If you have any questions at any time, please reach out to us by email, or on the #PPRL channel of the <a href="https://opendp.slack.com/archives/C050A67BPE3">OpenDP 
+					Slack</a> (<a href="connect.html">Connect</a>). 
+					</p>
+
+					<h3 id="format">Submission format:</h3> 
+					
+					For each of the three privacy settings, submit a Challenge Record Prediction csv file with the challenge record ID’s and your prediction 
+					for which client it belongs to: 1, 2, 3, 4 or 0 for none.
+						
+					<br><br>
+					<font style="color:red"><[Example file picture] .  ></font>
+						
+					<br><br>
+					We’ll also ask you for any references (papers, libraries, etc) relevant to your submission, a short description of your approach, an 
+					estimate of the computation time/power needed for your approach, and whether you’d like to be included in our Techniques showcase.  
+						
+					<br><br>
+					<h3 id="schedule">Submission schedule:</h3>
+					
+					We’ll be collecting submissions for three big leaderboard updates during the Phase 1 soybean data problem.  Submit your bets for the 
+					challenge records, and you’ll get back a percentage accuracy on the leaderboard.   
+					
+					<br><br>
+					To help you explore possibilities, you can make up to three submissions per leaderboard update, as long as those submissions are using 
+					significantly different techniques/approaches/configurations.   
+					
+					<br><br>
+					<font style="color:red">[Dates]</font> 
+						
+					<br><br>
+					We’ll be rating different attack libraries by how successful they are, and sharing what we learn about the overall privacy protection 
+					of different client models.   The goal here isn’t just to get at the top of the leaderboard, it’s to find out together in a realistic 
+					setting how attacks behave, and how safe these models really are.    
+					
+					<br><br>
+					<h3 id="practice">Practice data:</h3>  
+
+					If you want to check your predictions for Client 1, you can check here if you want to test how you’re doing. 
+				</p>
+		</section>
+			</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.dropotron.min.js"></script>
+	<script src="../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

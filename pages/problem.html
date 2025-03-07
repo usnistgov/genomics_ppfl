@@ -7,7 +7,7 @@
 <html>
 
 <head>
-	<title>Problem Statement</title>
+	<title>Problem Statements</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -82,10 +82,10 @@
                 <nav id="nav">
                     <ul>
 						<li><a href="../index.html" class="button">Home</a></li>
-						<li><a href="problem.html" class="button">Problem Statement</a></li>
-						<li><a href="leaderboard.html" class="button">Leaderboard </a></li>
+						<li><a href="problem.html" class="button">Problem Statements</a></li>
+						<!-- <li><a href="leaderboard.html" class="button">Leaderboard </a></li> -->
 						<li><a href="submit.html" class="button new">Submit</a></li>
-						<li><a href="techniques.html" class="button">Techniques</a></li>
+						<!-- <li><a href="techniques.html" class="button">Techniques</a></li> -->
 						<li><a href="resources.html" class="button">Resources</a></li>
 						<li><a href="connect.html" class="button">Connect</a></li>
                     </ul>
@@ -96,14 +96,14 @@
 		<!-- Main -->
 		<section id="main" class="container">
 			<header id="page-header">
-				<h2>Problem Statement</h2>
+				<h2>Problem Statements</h2>
 					
 					<ul class="actions special">
 						<li><a href="../index.html" class="button">Home</a></li>
-						<li><a href="problem.html" class="button primary">Problem Statement</a></li>
-						<li><a href="leaderboard.html" class="button">Leaderboard </a></li>
+						<li><a href="problem.html" class="button primary">Problem Statements</a></li>
+						<!-- <li><a href="leaderboard.html" class="button">Leaderboard </a></li> -->
 						<li><a href="submit.html" class="button new">Submit</a></li>
-						<li><a href="techniques.html" class="button">Techniques</a></li>
+						<!-- <li><a href="techniques.html" class="button">Techniques</a></li> -->
 						<li><a href="resources.html" class="button">Resources</a></li>
 						<li><a href="connect.html" class="button">Connect</a></li>
 					</ul>
@@ -116,9 +116,81 @@
 					<ul>
 						<li><a href="#phase-1">Phase 1: Soybean Data ("Don't Spill the Beans!)</a></li>
 						<li><a href="#problem-1">Problem I Specification: Membership Inference Attack [March - April]</a></li>
-						<li><a href="how-to-submit">Red Team Challenge Problem and How to Submit:</a></li>
+						<li><a href="#challenge">Red Team Challenge Problem</a></li>
 					</ul>
 
+					<br>
+					<h3>2025 Privacy Red Team Calendar of Events</h3>
+					
+					<img src="../images/ppfl calendar.png" height="250">
+					<!-- 
+					<table>
+						<thead>
+						  <tr>
+							<th scope="col">Start</th>
+							<th scope="col">End</th>
+							<th scope="col">Program</th>
+							<th scope="col">Thing</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<th scope="row">10 Mar 2025</th>
+							<td>---</td>
+							<td>CRC + PPFL</td>
+							<td>Webinar</td>
+						  </tr>
+						  <tr>
+							<th scope="row">10 Mar 2025</th>
+							<td>May 1</td>
+							<td>PPFL</td>
+							<td>Red team phase 1 Problem 1</td>
+						  </tr>
+						  <tr>
+							<th scope="row">1 April 2025</th>
+							<td>---</td>
+							<td>PPFL</td>
+							<td>Deadline for Phase 1 Problem 1 Intermediate Leaderboard Update</td>
+						  </tr>
+						  <tr>
+							<th scope="row">10 April 2025</th>
+							<td>May 1</td>
+							<td>PPFL</td>
+							<td>Red team phase 1 Problem 2</td>
+						  </tr>
+						  <tr>
+							<th scope="row">1 May 2025</th>
+							<td>---</td>
+							<td>PPFL</td>
+							<td>Deadline for Phase 1 Problem 1 & 2 Final Leaderboard Updates</td>
+						  </tr>
+						  <tr>
+							<th scope="row">9 May 2025</th>
+							<td>June 30</td>
+							<td>PPFL</td>
+							<td>Red team phase 2 Problem 1</td>
+						  </tr>
+						  <tr>
+							<th scope="row">30 May 2025</th>
+							<td>---</td>
+							<td>PPFL</td>
+							<td>Deadline for Phase 2 Problem 1 Intermediate Leaderboard Update</td>
+						  </tr>
+						  <tr>
+							<th scope="row">9 June 2025</th>
+							<td>June 30</td>
+							<td>PPFL</td>
+							<td>Red team phase 2 Problem 2</td>
+						  </tr>
+						  <tr>
+							<th scope="row">30 June 2025</th>
+							<td>---</td>
+							<td>PPFL</td>
+							<td>Deadline for Phase 2 Problem 1 & 2 Final Leaderboard Update </td>
+						  </tr>
+						</tbody>
+					  </table>
+					-->
 				<hr>
 
 				<h3 id="phase-1">Phase 1: Soybean Data ("Don't Spill the Beans!")</h3>
@@ -162,6 +234,7 @@
 							for different clients? </li>
 					</ul>
 					
+					<br>
 					<b>Machine Learning Data and Task:</b> The task the models are trained to do here is predict seed color for soy bean plants. 
 					The columns in the data have been reduced to the gene variants most relevant for this task.   
 					
@@ -172,14 +245,13 @@
 					different variants may have more or less importance for the plant’s visible properties.   
 					
 					<br><br>
-					[data excerpt]
-					
+					<IMG SRC="../images/rawgenomicdataphoto.png" height="255">					
 					<br><br>
 					Each problem during the exercise will focus on a different task; the data and models here are focused on predicting 
 					seed coat color.  The overall distribution of seed color labels in the population as a whole looks like this:  
 					
 					<br><br>
-					[histogram of seed coat color labels]
+					<img src="../images/seedcolorhistogram.png" height="450">
 					
 					<br><br>
 					<b>Executing a Membership Inference Attack:</b>
@@ -209,18 +281,20 @@
 							really private? </li>
 					</ul>
 					
+					<br>
 					In order to make an attack model, you need data to train it on.  The attacker doesn’t have access to the original client 
 					data, of course, but in the real world they might be able to buy similar, overlapping data sets from a data broker.   
 					
 					<br><br>
 					<u>For each client model we will provide you with two sets of records to help train your attack:</u> 
+					<br><br>
 					<ul>
 						<li><b>Relevant Records:</b> These complete records (including correct seed coat color label) are similar to the clients training 
 							data, but might or might not have been actually included in the client’s training data.  /li>
 						<li><b>External Records:</b> These complete records (including correct seed coat color label) are guaranteed to have not been 
 							included in the client’s training data. </li>
 					</ul>
-				
+					<br>
 					<p>
 						<img src="../images/federated membership inference attack problem design.png" height="450">
 					</p>
@@ -236,7 +310,7 @@
 
 					<br><br>
 
-					<h3 id="how-to-submit">Red Team Challenge Problem and How to Submit:</h3>
+					<h3 id="challenge">Red Team Challenge Problem</h3>
 					<p>
 					For each of our three privacy settings (CNN, DPLowPrivacy, DPHighPrivacy) we’ll provide the following (see Federated Membership 
 					Inference Attack Design diagram above): 
@@ -250,45 +324,6 @@
 						<li><b>Challenge Records.</b> These are the records we want you to attack.  Each record has a unique ID number.   For each record, predict 
 							whether it belongs to client 1, 2, 3, 4 or write 0 if none of the above.</li>
 					</ul>
-		
-					<b>Submission format:</b> 
-					
-					<br>
-					For each of the three privacy settings, submit a Challenge Record Prediction csv file with the challenge record ID’s and your prediction 
-					for which client it belongs to: 1, 2, 3, 4 or 0 for none
-						
-					<br><br>
-					[Example file picture] .  
-						
-					<br><br>
-					We’ll also ask you for any references (papers, libraries, etc) relevant to your submission, a short description of your approach, an 
-					estimate of the computation time/power needed for your approach, and whether you’d like to be included in our Techniques showcase.  
-						
-					<br><br>
-					<b>Submission schedule:</b>
-					
-					<br>
-					We’ll be collecting submissions for three big leaderboard updates during the Phase 1 soybean data problem.  Submit your bets for the 
-					challenge records, and you’ll get back a percentage accuracy on the leaderboard.   
-					
-					<br><br>
-					To help you explore possibilities, you can make up to two submissions per leaderboard update, as long as those submissions are using 
-					significantly different techniques/approaches/configurations.   
-					
-					<br><br>
-					[Dates] 
-						
-					<br><br>
-					We’ll be rating different attack libraries by how successful they are, and sharing what we learn about the overall privacy protection 
-					of different client models.   The goal here isn’t just to get at the top of the leaderboard, it’s to find out together in a realistic 
-					setting how attacks behave, and how safe these models really are.    
-					
-					<br><br>
-					<b>Practice data:</b>  
-
-					<br><br>
-					If you want to check your predictions for Client 1, you can check here if you want to test how you’re doing. 
-				</p>
 				</section>
 		</section>
 			</div>
