@@ -162,8 +162,8 @@ themes:
   #         - Next Generation Networks
   #         - Protocol Design and Standardization
   #         - Software-defined and virtual networks
-  #     - Privacy
-  #     - Software research
+      - Privacy
+      # - Software research
   #         - Software assurance
   #         - Software performance
   #         - Software testing

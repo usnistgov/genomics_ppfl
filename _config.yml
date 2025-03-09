@@ -1,6 +1,0 @@
-# Site settings
-title: "Genomics Privacy-Perserving Federated Learning at NIST"
-description: "Documentation for the Genomics Privacy-Perserving Federated Learning at NIST."
-
-baseurl: "/genomics_ppfl"  
-rooturl: ""

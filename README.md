@@ -1,8 +1,26 @@
-# NIST Open-Source Software Repository Template
+# NIST Genomics PPFL Red Exercise Competitor's Pack
 
-Use of GitHub by NIST employees for government work is subject to
-the [Rules of Behavior for GitHub][gh-rob]. This is the
-recommended template for NIST employees, since it contains
-required files with approved text. For details, please consult
-the Office of Data & Informatics' [Quickstart Guide to GitHub at
-NIST][gh-odi].
+This repository contains the competitor's pack materials for the 2025 PPFL@NIST Red Team Exercise. 
+Please check the [NIST Genomics PPFL Platform](https://pages.nist.gov/genomics_ppfl/index.html) for information about the exercise, how to participate, and how to use these materials. 
+Tutorial notebooks with submission instructions are also included in each problem pack. 
+The repository will be periodically updated as new problems are released throughout the exercise.  
+
+Phase 1: Soybean Data [March - April]
+* Problem 1 -- Basic Problem, Membership Inference Attack
+* Problem 2 -- Advanced Problem, Reconstruction Attack
+
+Phase 2: Cancer Data [May - June]
+* Problem 3 -- Basic Problem, TBA
+* Problem 4 -- Advanced Problem, TBA
+   
+## Contributors: 
+Karan Bhagat  
+Christine Task  
+Amy Hilla  
+Curtis Mitchell  
+Jess Stahl  
+Justin Wagner  
+Gary Howarth
+
+## Questions? 
+Contact gary.howarth@nist.gov
