@@ -6,8 +6,8 @@ Tutorial notebooks with submission instructions are also included in each proble
 The repository will be periodically updated as new problems are released throughout the exercise.  
 
 Phase 1: Soybean Data [March - April]
-* Problem 1 -- Basic Problem, Membership Inference Attack
-* Problem 2 -- Advanced Problem, Reconstruction Attack
+* Problem 1 -- Basic Problem, Membership Inference Attack (NIST_PPFL_problem1_202503.zip)
+* Problem 2 -- Advanced Problem, Reconstruction Attack 
 
 Phase 2: Cancer Data [May - June]
 * Problem 3 -- Basic Problem, TBA
