@@ -144,9 +144,14 @@ https://pages.nist.gov/genomics_ppfl/
 					<div class="box">
 						<h3><!-- Model Problem 1: --> Federated learning over silos of genomic data</h3>
 
-						<p>Federated learning supports distributed research in cancer, biotech, and beyond, but privacy-preserving federated learning 
-							(PPFL) is hard.  We've implemented a differentially private PPFL network. Can you determine who is in the data and who is not?
-							Can you reconstruct sensitive feature values? What epsilon do you need to protect the individual records and client IP?  
+						<p>Federated learning when machine learning is conducted across many stores of data without aggregating the information centrally. The data stores, or clients as they are typically called, can be individual mobile phones, large data silos, internet-of-things devices, or practically any other type of computer. Privacy-preserving federated learning (PPFL) is additional methods are incorporated to limit what information can be shared across clients, between clients and central communications servers, or the in the final models.</p>
+
+						<p> <a href="https://www.nist.gov/itl/applied-cybersecurity/privacy-engineering/collaboration-space/blog-series/privacy-preserving"> The NIST PPFL blog series is a great place to learn more about this exciting technology. </a> </p>
+
+
+						<p>In this red teaming exercise we’re exploring how clients can use differential privacy (added noise) to ensure privacy for genomic data even when the central compute server is untrusted and potentially compromised.  This is safer than clients submitting raw data or models, but we need to understand the interplay of differential privacy, heterogeneity, and genomic data. </p>
+
+						<p>Try to attack the models at different privacy conditions and together we’ll learn empirically about the protections they provide.  Understanding how to achieve verifiably sufficient privacy strength is a key requirement for deploying PPFL collaborations.  
 						</p>
 
 						<p style="font-size:24px;">
