@@ -1,5 +1,14 @@
 # NIST Genomics PPFL Red Exercise Competitor's Pack
 
+**To clone this repo, you must Git Large File Servis (LFS) installed and enabled.**
+
+`Install git lfs: 
+`git lfs install`
+
+Clone repo: 
+`git clone https://github.com/usnistgov/genomics_ppfl.git`
+
+
 This repository contains the competitor's pack materials for the 2025 PPFL@NIST Red Team Exercise. 
 Please check the [NIST Genomics PPFL Platform](https://pages.nist.gov/genomics_ppfl/index.html) for information about the exercise, how to participate, and how to use these materials. 
 Tutorial notebooks with submission instructions are also included in each problem pack. 
