@@ -2,6 +2,11 @@
 
 ## Installation:
 
+Download the zip file using the context menu, or click the zip file and then download by pressing the button next to 'Raw.'
+
+Unzip the file locally, and you've got the data you need. 
+
+### Cloning
 To clone this repo, you must Git Large File Servis (LFS) installed and enabled.
 
 Install git lfs: 
@@ -12,7 +17,10 @@ Clone repo:
 
 `git clone https://github.com/usnistgov/genomics_ppfl.git`
 
-Alternatively, simply download the .zip file. 
+Pull large files: 
+
+`cd genomics_ppfl && git lfs pull`
+
 
 ## Introduction
 This repository contains the competitor's pack materials for the 2025 PPFL@NIST Red Team Exercise. 
