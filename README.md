@@ -12,6 +12,8 @@ Clone repo:
 
 `git clone https://github.com/usnistgov/genomics_ppfl.git`
 
+Alternatively, simply download the .zip file. 
+
 ## Introduction
 This repository contains the competitor's pack materials for the 2025 PPFL@NIST Red Team Exercise. 
 Please check the [NIST Genomics PPFL Platform](https://pages.nist.gov/genomics_ppfl/index.html) for information about the exercise, how to participate, and how to use these materials. 
