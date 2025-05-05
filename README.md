@@ -1,10 +1,12 @@
 # NIST Genomics PPFL Red Exercise Competitor's Pack
 
-## Installation:
+## Installing
 
-Download the zip file using the context menu, or click the zip file and then download by pressing the button next to 'Raw.'
+Individual problems can be downloaded from 'Releases'.
 
-Unzip the file locally, and you've got the data you need. 
+[Problem 1 -- Membership inference](https://github.com/usnistgov/genomics_ppfl/releases/tag/Problem1)
+[Problem 2 -- Rconstruction](https://github.com/usnistgov/genomics_ppfl/releases/tag/Problem2)
+
 
 ### Cloning
 To clone this repo, you must Git Large File Servis (LFS) installed and enabled.
