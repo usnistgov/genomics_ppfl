@@ -5,7 +5,8 @@
 Individual problems can be downloaded from 'Releases'.
 
 [Problem 1 -- Membership inference](https://github.com/usnistgov/genomics_ppfl/releases/tag/Problem1)
-[Problem 2 -- Rconstruction](https://github.com/usnistgov/genomics_ppfl/releases/tag/Problem2)
+
+[Problem 2 -- Reconstruction](https://github.com/usnistgov/genomics_ppfl/releases/tag/Problem2)
 
 
 ### Cloning
