@@ -111,99 +111,49 @@
 			</header>
 			<div class="box participate separators">
 				<section>
+				  
+<!-- ------------------------------------------------------------- -->
+<!--     Quick Links                                               -->
+<!-- ------------------------------------------------------------- -->
 				
 					<h3>Quick Links (this page):</h3>
 					<ul>
-						<li><a href="#phase-1">Phase 1: Soybean Data ("Don't Spill the Beans!)</a></li>
-						<li><a href="#problem-1">Problem I: Membership Inference Attack [March - April]</a></li>
-						<li><a href="#challenge">Red Team Challenge Problem</a></li>
+						<li><a href="#phase-1">Phase 1 Overview: Soybean Data ("Don't Spill the Beans!)</a></li>
+						<li><a href="#problem-1">Problem I: Membership Inference Attack [March - July]</a></li>
+						<li><a href="#problem-2">NEW!! Problem II: Reconstruction Attack [May - July]</a></li>
 					</ul>
+					
+<!-- ------------------------------------------------------------- -->
+<!--     Calendar                                                 -->
+<!-- ------------------------------------------------------------- -->
 						<hr>
-						<h3>2025 Privacy Red Team Calendar of Events</h3>
+						<hr>
+						
+						<h3 id="Calendar">2025 Privacy Red Team Calendar of Events</h3>
 
 						Teams are welcome to <a href="https://docs.google.com/forms/d/e/1FAIpQLSetiG9peeMymzA476T8QEH2Mff8_1Q9gmldBmiF4dyff3L4mA/viewform">register</a> at any point during the exercise and <a href="submit.html">submit</a> an entry for any problem. 
 						Participating in Phase 1 isn't required for participating in Phase 2.
 						<br><br>
 					<img src="../images/ppfl calendar.png" height="375">
-					<!-- 
-					<table>
-						<thead>
-						  <tr>
-							<th scope="col">Start</th>
-							<th scope="col">End</th>
-							<th scope="col">Program</th>
-							<th scope="col">Thing</th>
-						  </tr>
-						</thead>
-						<tbody>
-						  <tr>
-							<th scope="row">10 Mar 2025</th>
-							<td>---</td>
-							<td>CRC + PPFL</td>
-							<td>Webinar</td>
-						  </tr>
-						  <tr>
-							<th scope="row">10 Mar 2025</th>
-							<td>May 1</td>
-							<td>PPFL</td>
-							<td>Red team phase 1 Problem 1</td>
-						  </tr>
-						  <tr>
-							<th scope="row">1 April 2025</th>
-							<td>---</td>
-							<td>PPFL</td>
-							<td>Deadline for Phase 1 Problem 1 Intermediate Leaderboard Update</td>
-						  </tr>
-						  <tr>
-							<th scope="row">10 April 2025</th>
-							<td>May 1</td>
-							<td>PPFL</td>
-							<td>Red team phase 1 Problem 2</td>
-						  </tr>
-						  <tr>
-							<th scope="row">1 May 2025</th>
-							<td>---</td>
-							<td>PPFL</td>
-							<td>Deadline for Phase 1 Problem 1 & 2 Final Leaderboard Updates</td>
-						  </tr>
-						  <tr>
-							<th scope="row">9 May 2025</th>
-							<td>June 30</td>
-							<td>PPFL</td>
-							<td>Red team phase 2 Problem 1</td>
-						  </tr>
-						  <tr>
-							<th scope="row">30 May 2025</th>
-							<td>---</td>
-							<td>PPFL</td>
-							<td>Deadline for Phase 2 Problem 1 Intermediate Leaderboard Update</td>
-						  </tr>
-						  <tr>
-							<th scope="row">9 June 2025</th>
-							<td>June 30</td>
-							<td>PPFL</td>
-							<td>Red team phase 2 Problem 2</td>
-						  </tr>
-						  <tr>
-							<th scope="row">30 June 2025</th>
-							<td>---</td>
-							<td>PPFL</td>
-							<td>Deadline for Phase 2 Problem 1 & 2 Final Leaderboard Update </td>
-						  </tr>
-						</tbody>
-					  </table>
-					-->
+				
+<!-- ------------------------------------------------------------- -->
+<!--    Federated Learning Overview (Phase 1)                      -->
+<!-- ------------------------------------------------------------- -->
+				<hr>
 				<hr>
 
 				<h3 id="phase-1">Phase 1: Soybean Data ("Don't Spill the Beans!")</h3>
-				<p>The first problem we’re addressing is at the first Privacy Barrier in the federated learning pipeline: 
-					the Untrusted Central Model.   In each round of federated model training, clients submit  parameter 
+				
+				  <p>
+				  The problems we’re focusing on in this exercise address the first Privacy Barrier in the federated learning pipeline: 
+					the Untrusted Central Model.  In each round of federated model training, clients submit parameter 
 					updates based on their private local data.  The central model collects these and uses them to update 
 					its model of the full population. The central model then shares its update with the clients, and the 
 					process repeats until the central model is fully trained. 
+					</p>
 					
 					<br><br>
-					To learn more about federated learning, check out NIST's tutorial <a href="https://www.nist.gov/itl/applied-cybersecurity/privacy-engineering/collaboration-space/blog-series/privacy-preserving">blog series</a> on PPFL.
+					To learn more about federated learning, check out NIST's tutorial <a href="https://www.nist.gov/itl/applied-cybersecurity/privacy-engineering/collaboration-space/blog-series/privacy-preserving">blog series</a> on PPFL!
 					
 					<br><br>
 					During this process the clients should retrain full rights and privacy for their individual records.  
@@ -215,22 +165,29 @@
 						<img src="../images/FL privacy barriers.png" height="350">
 					</p>
 
-					<b>In the Phase 1- Basic Problem</b>, running now, we’ll look at a minimally invasive attack: membership inference.   Can an 
+					<b>In Phase 1- Problem 1</b>, we look at a minimally invasive attack: <a href="#problem-1">Membership Inference.</a>  Can an 
 					attacker at the central aggregator use the client models to correctly infer whether a record belonged 
 					to a given client’s private data set?  
 
 					<br><br>
-					<b>In the Phase 1- Advanced Problem</b>, releasing in April, we’ll look at a much more invasive attack: reconstruction. Can 
-					an attacker use the	transcript of federated model parameter updates to reconstruct the original data 
+					<b>In Phase 1- Problem 2</b>, we perform a much more invasive attack:  <a href="#problem-2">Reconstruction.</a> Can 
+					an attacker use a series of federated model updates to reconstruct selected records in the original data 
 					for each client?
-				</p>
+				 <br><br>
 				
+<!-- ------------------------------------------------------------- -->
+<!--    Problem 1                      -->
+<!-- ------------------------------------------------------------- -->
 				<hr>
-				<h3 id="problem-1">Phase 1- Basic Problem: Membership Inference Attack [March - April]</h3>
+				<hr>
+				
+				<h3 id="problem-1">Problem 1: Membership Inference Attack [March - July]</h3>
+			
 				<p>
 					<b>Research Questions:</b> In this problem we focus on the worst case scenario for membership inference: what happens 
 					when the clients submit fully trained, potentially overfit local models to the untrusted central party? We want 
 					to explore the following important questions: 
+				</p>
 
 					<ul>
 						<li>Are the regular CNN’s vulnerable to membership inference attacks? </li>
@@ -291,7 +248,7 @@
 					In order to make an attack model, you need data to train it on.  The attacker doesn’t have access to the original client 
 					data, of course, but in the real world they might be able to buy similar, overlapping data sets from a data broker.   
 					
-					<br>
+					<br><br>
 					<u>For each client model we will provide you with two sets of records to help train your attack:</u> 
 					<br><br>
 					<ul>
@@ -315,7 +272,7 @@
 					see what other participants have tried. 
 
 					<br><br>
-					<h3 id="challenge">Red Team Challenge Problem</h3>
+					<h3 id="challenge">Problem 1 Definition</h3>
 					<p>
 					You can find a link to the competitors pack with everything you need to prepare a submission on the <a href="submit.html">Submit</a> page.
 					<br><br>
@@ -336,7 +293,7 @@
 					files.
 					
 					<br><br>
-					<h3 id="format">Submission format:</h3> 
+					<h3 id="format">Problem 1 Submission Format </h3> 
 					
 					For each of the three privacy settings, submit a Challenge Record Prediction csv file with the challenge record index number and your prediction 
 					for which client it belongs to: 1, 2, 3, 4 or 0 for none.
@@ -349,23 +306,128 @@
 					estimate of the computation time/power needed for your approach, and whether you’d like to be included in our Techniques showcase.  
 						
 					<br><br>
-					<h3 id="schedule">Submission schedule:</h3>
-					
-					The basic problems in each phase are intended to help you get a feel for the data set. For this reason we give you two opportunities to 
-					submit to the leaderboard on the basic problems: an intermediate leaderboard update and a final leaderboard update.   Submit your 
-					predictions for the challenge records by the deadline, and you’ll get back a percentage accuracy on the leaderboard.
+					<h3 id="schedule">Problem 1 Submission Schedule:</h3>
+				  
+				  There are multiple opportunities to submit your attack for this problem.  Check the <a href="#Calendar">Calendar</a> for the leaderboard update deadlines.  Submit your predictions for the challenge records by each leaderboard update deadline, and you’ll get back a percentage accuracy on the<a href="home/#leaderboard"> Leaderboard</a>.
+				  
+				  <br><br>
+					<b><i>You can submit up to three attempts for every leaderboard update deadline</i></b>, using different approaches/configurations. 
+					Your team will be scored by your highest performing entry. This gives you a chance to try out multiple libraries or ideas. 	We’ll be rating different attack libraries by how successful they are, and sharing what we learn about the overall privacy protection 
+					of different client models. The goal here isn’t just to get at the top of the leaderboard, it’s to find out together in a realistic 
+					setting how attacks behave, and how safe these models really are.    
 					
 					<br><br>
-					<b><i>Note you can submit up to three attempts for every leaderboard update deadline</i></b>, using different approaches/configurations. 
-					Your team will be scored by your highest performing entry. This gives you a chance to try out multiple libraries or ideas.
+					<h3 id="practice">Problem 1 Practice data:</h3>  
+
+					In each problem we'll provide you with some demonstration data; essentially a part of the problem where we give you the answers for 
+					free, so you can try out different techniques locally before you submit. In the Phase I Problem 1 the competitor's pack includes 
+					the membership list for Client 4.
+				</p>
+
+				</section>
+				</p>
+				
+					<hr>
+					<hr>
 					
+				<section>
+				<h3 id="problem-2">Problem 2: Reconstruction Attack [May - July]</h3>
+				
+				Recall that in federated learning, the clients exchange model training information with the central model.  Clients first compute model gradients based just on their local data. They send these to the Central Model which averages them together. Each round the clients get a new average gradient from the central model and then perform updates on it using their data, as depicted below. 
+				
+       <br><br> 
+The privacy question for this problem is whether the Central Model can use the gradients collected from the clients to reconstruct their private data.
+
+				<p>
+						<img src="../images/MultiroundPPFL.png" height="450">
+				</p>
+				
+				<p>
+					<b>Research Questions:</b> For problem 2 on the soybean data, we tackle a worst case senario for reconstruction: What happens when the federated system shares gradient upates and record labels at the end of each round?
+		
+					We want to explore the following important questions: 
+					<ul>
+						<li>Are the regular CNN’s vulnerable to reconstruction attacks? </li>
+						<li>Can differential privacy help protect client data?  What epsilon is necessary? </li>
+						<li>Are some record types or columns more vulnerable to reconstruction than others?   Are some clients more vulnerable?</li>
+						<li>For this problem we're considering the full federated learning process, with multiple rounds of updates from each client.  Does having multiple rounds available affect the clients' vulnerability? </li>
+					</ul>
+					
+					<br>
+					<b>Machine Learning Data and Task:</b> The data columns and the classification task are different from Problem 1.  In this problem the models are trained to predict seed oil amounts for soy bean plants, and the columns in the data have been reduced to the gene variants most relevant for this task.  This is a numerical variable that we've divided into 5 bins: the seeds with label 0 have the least oil, and the seeds with label 4 have the most oil.  Being able to accurately predict seed oil from genetic data is of interest to biotech companies producing soybean oil.  
+					
+					<br><br>
+				 The overall distribution of seed oil labels in the population as a whole looks like this:  
+					
+					<br><br>
+					<img src="../images/seedoilhistogram.png" height="450">
+					
+					<br><br>
+					<h3>Executing a Reconstruction Attack:</h3>
+
+					The competitors pack provides data and models needed to attack a three round federated learning process across four clients.  We assume that the federated system leaks each client's final gradient update (from their final batch of records) at the end of each round.  It also leaks the record classification labels for the batch.  Our batch size is 5, meaning that each update the client makes to their gradients is based on just five records.  Can you use the client model and the gradient to reconstruct the five records  that produced it?  
+
+          <br><br>
+A reconstruction attack operates by trying out different possible record values, searching for a set of 5 records (with the specified labels), that could have produced the provided client gradient update.  
+					
+					<br>
+					<p>
+						<img src="../images/ReconstructionAttack.png" height="450">
+					</p>
+				
+				
+					<br><br>
+					<u>We have three sets of client models for you to attack:</u>
+			
 					<br><br>
 					<ul>
-						<li>April 1st: Intermediate Leaderboard Deadline (Basic Problem, Phase 1)</li>
-						<li>May 1st: Final Leaderboard Deadline (Basic Problem, Phase 1) </li>
+						<li><b>CNN:</b> These client models have no added noise</li>
+						<li><b>High Privacy DP:</b> These client models have noise added to every gradient computed during the training process, with privacy loss parameter epsilon set to 5. They should hopefully be private, but the added noise reduces their utility on the seed oil task. </li>
+						<li><b>Low Privacy DP:</b> These client models have noise added with privacy parameter epsilon = 200.  After three rounds of federated training they perform nearly as well on the task as the regular CNN.  Is their privacy protection any different than the regular CNN? </li>
 					</ul>
+				
+
+					<br><br>
+					<h3 id="challenge">Problem 2 Red Team Challenge</h3>
+					<p>
+					You can find a link to the competitors pack with everything you need to prepare a submission on the <a href="submit.html">Submit</a> page.
+					<br><br>
+					For each of our three privacy settings (CNN, DPLowPrivacy, DPHighPrivacy) we’ll provide the following (see the Reconstruction Attack diagram above): 
+
+					<ul>
+						<li><b>Client models 1, 2, 3, 4 </b>, over three rounds of training.  You'll have three versions of each model, starting from the least trained version to the most trained, one taken from each round of the federated training process.</li>
+						<li><b>Challenge gradients and record labels, </b> for each client, in each round. This is the leaked information you use for your attack, see Executing a Reconstruction Attack for more information. </li>
+					</ul>
+					
+					We also provide a demonstration notebook that walks through a simple reconstruction attack using the Breach library, along with all of the correct answers for Client 2 so you can test your appraoch.  Template submission files can be found in each client folder for you to complete with your recosntructed records (see below). 
+					
+					<br><br>
+					<h3 id="format">Problem 2 Submission Format and Scoring:</h3> 
+					
+					For each client (in each of the three privacy settings), we provide a submission csv file to make it easy to submit the results of your reconstruction attack. The file is formatted as shown below: the first column gives the training round number, and the second column gives the label of the record you're reconstructing.  The remaining columns are all 0's (placeholder values) and should be replaced with the reconstructed record values.  The tutorial notebook in the competitor's pack provides a walkthrough for creating a submission. 
+					
+						<br><br>
+				We’ll also ask you for any references (papers, libraries, etc) relevant to your submission, a short description of your approach, an estimate of the computation time/power needed for your approach, and whether you’d like to be included in our Techniques showcase. 
+					
+						<br><br>
+					<img src="../images/SubmissionFormat.png" height="160">
+					<br><br>
+					
+				<br><br> 
+				When we score your submission, if a gradient's record batch had multiple records with the same label (like the records with label 3 in round 0 above), we'll first match each of your reconstructed records with the most similar real record in the batch, and then score them by how closely they reconstructed their matched record.   Scoring is based on counting how many column values match between the original record and the reconstructed record, with a focus on columns of interest (selected genes with high variation). 
+				
+					<br><br>
+					<h3 id="schedule">Problem 2 Submission Schedule:</h3>
+					
+				   There are multiple opportunities to submit your attack for this problem.  Check the <a href="#Calendar">Calendar</a> for the leaderboard update deadlines.  Submit your predictions for the challenge records by each leaderboard update deadline, and you’ll get back a percentage accuracy on the<a href="home/#leaderboard"> Leaderboard</a>.
+				  
+				  <br><br>
+					<b><i>You can submit up to three attempts for every leaderboard update deadline</i></b>, using different approaches/configurations. 
+					Your team will be scored by your highest performing entry. This gives you a chance to try out multiple libraries or ideas. 	We’ll be rating different attack libraries by how successful they are, and sharing what we learn about the overall privacy protection 
+					of different client models. The goal here isn’t just to get at the top of the leaderboard, it’s to find out together in a realistic 
+					setting how attacks behave, and how safe these models really are.   
 						
-					<br>
+					<br><br>
 					We’ll be rating different attack libraries by how successful they are, and sharing what we learn about the overall privacy protection 
 					of different client models. The goal here isn’t just to get at the top of the leaderboard, it’s to find out together in a realistic 
 					setting how attacks behave, and how safe these models really are.    
@@ -374,8 +436,7 @@
 					<h3 id="practice">Practice data:</h3>  
 
 					In each problem we'll provide you with some demonstration data; essentially a part of the problem where we give you the answers for 
-					free, so you can try out different techniques locally before you submit. In the Phase I Basic Problem the competitor's pack includes 
-					the membership list for Client 4.
+					free, so you can try out different techniques locally before you submit.  The competitor's pack for Problem 2 contains all answers for Client 2. 
 				</p>
 
 				</section>
