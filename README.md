@@ -9,22 +9,6 @@ Individual problems can be downloaded from 'Releases'.
 [Problem 2 -- Reconstruction](https://github.com/usnistgov/genomics_ppfl/releases/tag/Problem2)
 
 
-### Cloning
-To clone this repo, you must Git Large File Servis (LFS) installed and enabled.
-
-Install git lfs: 
-
-`git lfs install`
-
-Clone repo: 
-
-`git clone https://github.com/usnistgov/genomics_ppfl.git`
-
-Pull large files: 
-
-`cd genomics_ppfl && git lfs pull`
-
-
 ## Introduction
 This repository contains the competitor's pack materials for the 2025 PPFL@NIST Red Team Exercise. 
 Please check the [NIST Genomics PPFL Platform](https://pages.nist.gov/genomics_ppfl/index.html) for information about the exercise, how to participate, and how to use these materials. 
