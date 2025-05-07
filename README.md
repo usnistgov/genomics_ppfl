@@ -4,9 +4,18 @@
 
 Individual problems can be downloaded from 'Releases'.
 
+Download each of the zip files for the model files, the tutorial, and requirements file. 
+
+
+
 [Problem 1 -- Membership inference](https://github.com/usnistgov/genomics_ppfl/releases/tag/Problem1)
 
 [Problem 2 -- Reconstruction](https://github.com/usnistgov/genomics_ppfl/releases/tag/Problem2)
+
+We recommend forming a virtual environment and installing the requirements in the the virtual environment. 
+
+Install the requirements: 
+`pip install -t requirements.txt`
 
 
 ## Introduction
