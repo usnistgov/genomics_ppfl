@@ -302,7 +302,8 @@
 					</p>
 
 						We have four red-teaming problems on two different data sets: Soybean data and Dog Breed data.  Check out the tabs below for problem descriptions and competitor's packs.  We consider two different types of attacks: 
-						
+					<br><br>
+					
 						<b>Membership Inference:</b> Problem 1 on both data sets looks at membership inference attacks. This is a minimally invasive attack.  
 						Can an attacker at the central aggregator use the client models to correctly infer whether a record belonged 
 					to a given client’s private data set?  
@@ -599,6 +600,7 @@
 							You'll be attacking the exact same models in both dog data problems (membership and reconstruction), which means you may be able to leverage what you learn in one problem to launch a more effective attack against the other problem.  
 							   <br><br> 
 							<b>Research Questions:</b> We focus on the worst case scenario for membership inference: what happens when the clients submit fully trained, potentially overfit local models to the untrusted central party?  We want to explore the following important questions: 
+							<br> 
 								<ul>
 									<li>Are the regular CNN’s vulnerable to membership inference attacks? </li>
 									<li>Do larger batch sizes reduce models' vulnerability to attacks?</li>
@@ -663,7 +665,7 @@
 								</ul>
 								<br>
 								<p>
-									<img src="../images/DogProb1_Diagram.png" height="450">
+									<img src="../images/DogProb1_Diagram.png" height="500">
 								</p>
 			
 								You can use the relevant and external records, combined with predictions from the client model, to train a separate attack for each 
