@@ -596,7 +596,7 @@
 						
 								In this problem the dog data serves as a real world substitute for human genomic data in medical applications. The dog data is larger, more heterogeneous, and more difficult for models to fit than the soybean data.  This creates an interesting problem for memberhip inference attacks; heterogeneous data contains more outliers, and that may make it easier to identify training data members. 	We'll be exploring the impact of differential privacy and also record batch size on privacy (see Dog Problem 2 for more about record batch size and local model training).  When gradient updates are computed over larger batches of records, that should reduce overfitting outliers and may make models more difficult to attack.   
 								<br><br>
-							.  You'll be attacking the exact same models in both dog data problems (membership and reconstruction), which means you may be able to leverage what you learn in one problem to launch a more effective attack against the other problem.  
+							You'll be attacking the exact same models in both dog data problems (membership and reconstruction), which means you may be able to leverage what you learn in one problem to launch a more effective attack against the other problem.  
 							   <br><br> 
 							<b>Research Questions:</b> We focus on the worst case scenario for membership inference: what happens when the clients submit fully trained, potentially overfit local models to the untrusted central party?  We want to explore the following important questions: 
 								<ul>
