@@ -134,6 +134,8 @@
 	
 				const tab1Content = $('#tabset1 .tab-content').eq(0);
 				const tab2Content = $('#tabset1 .tab-content').eq(1);
+				const tab3Content = $('#tabset1 .tab-content').eq(2);
+				const tab4Content = $('#tabset1 .tab-content').eq(3);
 	
 				let matched = false;
 				if (tab1Content.find(hash).length > 0) {
@@ -141,6 +143,12 @@
 					matched = true;
 				} else if (tab2Content.find(hash).length > 0) {
 					showTab('tabset1', 1);
+					matched = true;
+				} else if (tab3Content.find(hash).length > 0) {
+					showTab('tabset1', 2);
+					matched = true;
+				} else if (tab4Content.find(hash).length > 0) {
+					showTab('tabset1', 3);
 					matched = true;
 				}
 	
@@ -168,11 +176,17 @@
 		
 			const tab1Content = $('#tabset1 .tab-content').eq(0);
 			const tab2Content = $('#tabset1 .tab-content').eq(1);
+			const tab3Content = $('#tabset1 .tab-content').eq(2);
+			const tab4Content = $('#tabset1 .tab-content').eq(3);
 		
 			if (tab1Content.find(hash).length > 0) {
 				showTab('tabset1', 0);
 			} else if (tab2Content.find(hash).length > 0) {
 				showTab('tabset1', 1);
+			} else if (tab3Content.find(hash).length > 0) {
+				showTab('tabset1', 2);
+			} else if (tab4Content.find(hash).length > 0) {
+				showTab('tabset1', 3);
 			}
 		
 			setTimeout(() => {
@@ -239,8 +253,10 @@
 					<h3>Quick Links (this page):</h3>
 					<ul>
 						<li><a href="#phase-1">Phase 1 Overview: Soybean Data ("Don't Spill the Beans!)</a></li>
-						<li><a href="#problem-1">Problem I: Membership Inference Attack [March - July]</a></li>
-						<li><a href="#problem-2">NEW!! Problem II: Reconstruction Attack [May - July]</a></li>
+						<li><a href="#problem-1">Soybean Data Problem I: Membership Inference Attack [March - July]</a></li>
+						<li><a href="#problem-2">Soybean Data Problem II: Reconstruction Attack [May - July]</a></li>
+						<li><a href="#dog-problem-1"><b style="color: red;">New!!</b> Dog Data Problem I: Membership Inference Attack [June - July]</a></li>
+						<li><a href="#dog-problem-2"><b style="color: red;">New!!</b> Dog Data Problem II: Reconstruction Attack [June - July]</a></li>
 					</ul>
 					
 <!-- ------------------------------------------------------------- -->
@@ -262,7 +278,7 @@
 				<hr>
 				<hr>
 
-				<h3 id="phase-1">Phase 1: Soybean Data ("Don't Spill the Beans!")</h3>
+				<h3 id="phase-1">Privacy-preserving Federated Learning (PPFL)</h3>
 				
 				  <p>
 				  The problems we’re focusing on in this exercise address the first Privacy Barrier in the federated learning pipeline: 
@@ -285,14 +301,16 @@
 						<img src="../images/FL privacy barriers.png" height="350">
 					</p>
 
-					<b>In Phase 1- Problem 1</b>, we look at a minimally invasive attack: <a href="#problem-1">Membership Inference.</a>  Can an 
-					attacker at the central aggregator use the client models to correctly infer whether a record belonged 
+						We have four red-teaming problems on two different data sets: Soybean data and Dog Breed data.  Check out the tabs below for problem descriptions and competitor's packs.  We consider two different types of attacks: 
+						
+						<b>Membership Inference:</b> Problem 1 on both data sets looks at membership inference attacks. This is a minimally invasive attack.  
+						Can an attacker at the central aggregator use the client models to correctly infer whether a record belonged 
 					to a given client’s private data set?  
 
 					<br><br>
-					<b>In Phase 1- Problem 2</b>, we perform a much more invasive attack:  <a href="#problem-2">Reconstruction.</a> Can 
-					an attacker use a series of federated model updates to reconstruct selected records in the original data 
-					for each client?
+					  <b>Reconstruction:</b> For Problem 2 on both data sets we perform a much more invasive attack, reconstruction. Can 
+					an attacker use a series of model update gradients to reconstruct selected records in the original data 
+					for each client?  On the dog data we go a step further and ask: Can an attacker tell if a gradient's record batch included a hound dog?  
 				 <br><br>
 				</section>
 
@@ -300,15 +318,17 @@
 				<hr>
 				<div class="tabs" id="tabset1">
 					<div class="tab-buttons">
-					  <button onclick="showTab('tabset1', 0)" class="active">Problem 1</button>
-					  <button onclick="showTab('tabset1', 1)"><b style="color: red;">NEW!!</b> Problem 2</button>
+					  <button onclick="showTab('tabset1', 0)" class="active">Soybean Data Problem 1</button>
+					  <button onclick="showTab('tabset1', 1)">Soybean Data Problem 2</button>
+					  <button onclick="showTab('tabset1', 2)"><b style="color: red;">NEW!!</b> Dog Data Problem 1</button>
+					  <button onclick="showTab('tabset1', 3)"><b style="color: red;">NEW!!</b> Dog Data Problem 2</button>
 					</div>
 <!-- ------------------------------------------------------------- -->
-<!--    Problem 1 TAB                    						   -->
+<!--    Soybean Data Problem 1 TAB                    						   -->
 <!-- ------------------------------------------------------------- -->
 					<div class="tab-content active"> 
 						<section>
-							<h3 id="problem-1">Problem 1: Membership Inference Attack [March - July]</h3>
+							<h3 id="problem-1">Soybean Problem 1: Membership Inference Attack</h3>
 						
 							<p>
 								<b>Research Questions:</b> In this problem we focus on the worst case scenario for membership inference: what happens 
@@ -395,11 +415,10 @@
 								are not members.  The external records are guaranteed to not be client records for the target client. 
 			
 								<br><br>
-								How precisely do you train an attack model?   Check out our resources page for libraries and references, and our techniques page to 
-								see what other participants have tried. 
+								How precisely do you train an attack model?   Check out our resources page for libraries and references. 
 			
 								<br><br>
-								<h3 id="challenge">Problem 1 Definition</h3>
+								<h3 id="challenge">Soybean Problem 1 Definition</h3>
 								<p>
 								You can find a link to the competitors pack with everything you need to prepare a submission on the <a href="submit.html">Submit</a> page.
 								<br><br>
@@ -420,7 +439,7 @@
 								files.
 								
 								<br><br>
-								<h3 id="format">Problem 1 Submission Format </h3> 
+								<h3 id="format">Soybean Problem 1 Submission Format </h3> 
 								
 								For each of the three privacy settings, submit a Challenge Record Prediction csv file with the challenge record index number and your prediction 
 								for which client it belongs to: 1, 2, 3, 4 or 0 for none.
@@ -433,7 +452,7 @@
 								estimate of the computation time/power needed for your approach, and whether you’d like to be included in our Techniques showcase.  
 									
 								<br><br>
-								<h3 id="schedule">Problem 1 Submission Schedule:</h3>
+								<h3 id="schedule">Soybean Problem 1 Submission Schedule:</h3>
 							  
 							  There are multiple opportunities to submit your attack for this problem.  Check the <a href="#Calendar">Calendar</a> for the leaderboard update deadlines.  Submit your predictions for the challenge records by each leaderboard update deadline, and you’ll get back a percentage accuracy on the<a href="home/#leaderboard"> Leaderboard</a>.
 							  
@@ -444,7 +463,7 @@
 								setting how attacks behave, and how safe these models really are.    
 								
 								<br><br>
-								<h3 id="practice">Problem 1 Practice data:</h3>  
+								<h3 id="practice">Sloybean Problem 1 Practice data:</h3>  
 			
 								In each problem we'll provide you with some demonstration data; essentially a part of the problem where we give you the answers for 
 								free, so you can try out different techniques locally before you submit. In the Phase I Problem 1 the competitor's pack includes 
@@ -453,11 +472,11 @@
 						</section>
 					</div>
 <!-- ------------------------------------------------------------- -->
-<!--    Problem 2 TAB                    						   -->
+<!--    Soybean Data Problem 2 TAB                    						   -->
 <!-- ------------------------------------------------------------- -->
 					<div class="tab-content">
 						<section>
-							<h3 id="problem-2">Problem 2: Reconstruction Attack [May - July]</h3>
+							<h3 id="problem-2">Soybean Problem 2: Reconstruction Attack </h3>
 							
 							Recall that in federated learning, the clients exchange model training information with the central model.  Clients first compute model gradients based just on their local data. They send these to the Central Model which averages them together. Each round the clients get a new average gradient from the central model and then perform updates on it using their data, as depicted below. 
 							
@@ -515,7 +534,7 @@
 							
 			
 								<br><br>
-								<h3 id="challenge">Problem 2 Red Team Challenge</h3>
+								<h3 id="challenge">Soybean Problem 2 Red Team Challenge</h3>
 								<p>
 								You can find a link to the competitors pack with everything you need to prepare a submission on the <a href="submit.html">Submit</a> page.
 								<br><br>
@@ -529,7 +548,7 @@
 								We also provide a demonstration notebook that walks through a simple reconstruction attack using the Breach library, along with all of the correct answers for Client 2 so you can test your appraoch.  Template submission files can be found in each client folder for you to complete with your recosntructed records (see below). 
 								
 								<br><br>
-								<h3 id="format">Problem 2 Submission Format and Scoring:</h3> 
+								<h3 id="format">Soybean Problem 2 Submission Format and Scoring:</h3> 
 								
 								For each client (in each of the three privacy settings), we provide a submission csv file to make it easy to submit the results of your reconstruction attack. The file is formatted as shown below: the first column gives the training round number, and the second column gives the label of the record you're reconstructing.  The remaining columns are all 0's (placeholder values) and should be replaced with the reconstructed record values.  The tutorial notebook in the competitor's pack provides a walkthrough for creating a submission. 
 								
@@ -544,7 +563,7 @@
 							When we score your submission, if a gradient's record batch had multiple records with the same label (like the records with label 3 in round 0 above), we'll first match each of your reconstructed records with the most similar real record in the batch, and then score them by how closely they reconstructed their matched record.   Scoring is based on counting how many column values match between the original record and the reconstructed record, with a focus on columns of interest (selected genes with high variation). 
 							
 								<br><br>
-								<h3 id="schedule">Problem 2 Submission Schedule:</h3>
+								<h3 id="schedule">Soybean Problem 2 Submission Schedule:</h3>
 								
 							   There are multiple opportunities to submit your attack for this problem.  Check the <a href="#Calendar">Calendar</a> for the leaderboard update deadlines.  Submit your predictions for the challenge records by each leaderboard update deadline, and you’ll get back a percentage accuracy on the<a href="home/#leaderboard"> Leaderboard</a>.
 							  
@@ -559,6 +578,268 @@
 								of different client models. The goal here isn’t just to get at the top of the leaderboard, it’s to find out together in a realistic 
 								setting how attacks behave, and how safe these models really are.    
 								
+								<br><br>
+								<h3 id="practice">Practice data:</h3>  
+			
+								In each problem we'll provide you with some demonstration data; essentially a part of the problem where we give you the answers for 
+								free, so you can try out different techniques locally before you submit.  The competitor's pack for Problem 2 contains all answers for Client 2. 
+							</p>
+			
+							</section>
+					</div>
+<!-- ------------------------------------------------------------- -->
+<!--    Dog Data Problem 1 TAB                    						   -->
+<!-- ------------------------------------------------------------- -->
+					<div class="tab-content"> 
+						<section>
+							<h3 id="dog-problem-1">Dog Problem 1: Membership Inference Attack</h3>
+						
+								In this problem the dog data serves as a real world substitute for human genomic data in medical applications. The dog data is larger, more heterogeneous, and more difficult for models to fit than the soybean data.  This creates an interesting problem for memberhip inference attacks; heterogeneous data contains more outliers, and that may make it easier to identify training data members. 	We'll be exploring the impact of differential privacy and also record batch size on privacy (see Dog Problem 2 for more about record batch size and local model training).  When gradient updates are computed over larger batches of records, that should reduce overfitting outliers and may make models more difficult to attack.   
+								<br><br>
+							.  You'll be attacking the exact same models in both dog data problems (membership and reconstruction), which means you may be able to leverage what you learn in one problem to launch a more effective attack against the other problem.  
+							   <br><br> 
+							<b>Research Questions:</b> We focus on the worst case scenario for membership inference: what happens when the clients submit fully trained, potentially overfit local models to the untrusted central party?  We want to explore the following important questions: 
+								<ul>
+									<li>Are the regular CNN’s vulnerable to membership inference attacks? </li>
+									<li>Do larger batch sizes reduce models' vulnerability to attacks?</li>
+									<li>Can differential privacy help protect client data?</li>
+									<li>Different clients have different local data distributions– does the effectiveness of differential privacy differ 
+										for different clients?</li>
+								</ul>
+
+								
+								<br>
+								<b>Machine Learning Data and Task:</b> The task the models are trained to do here is predict dog breed group based on genetic data. 
+								The columns in the data have been reduced to gene variants relevant for this task.The overall distribution of dog breed group labels in the population as a whole looks like this:  
+								
+								<br><br>
+								<img src="../images/DogBreedLabelDistribution.png" height="450">
+								
+								<br><br>
+								Look below for an example of gene variant data.  Each column represents a gene, and the value of the column indicates 
+								whether a given plant’s gene varies from the “default” value. For instance the value  “A/T” indicates that the default 
+								value of the gene is “A”, but instead this dog has value “T”. Some genes vary from default more than others, and 
+								different variants may have more or less importance for the dog's physical traits. Note that the records in 
+								the competitor's pack have been processed into a binary format ("one hot encoding") to make them easier for the models to 
+								work with; they're more machine readable and less human readable than the raw data below. 
+								
+								<br><br>
+								<IMG SRC="../images/rawgenomicdataphoto.png" height="255">					
+								<br><br>
+								
+								<br><br>
+								<h3>Executing a Membership Inference Attack:</h3>
+			
+								Membership inference attacks in general operate by training an attack model to predict whether a record belongs to a
+								 given model’s training data.  The idea is that the targeted model will have better confidence and accuracy on records 
+								 it was trained on, as compared to records it hasn’t seen before.  This is more likely to be true if the training data 
+								 is very small or the model fit its data very closely.   
+								
+								 <br><br>
+								If we can prevent overfitting, that should reduce vulnerability to membership inference attacks.   In the dog data problems we're going to explore two different ways to prevent overfitting.  The first way is just by increasing the size of the record batch used during training. This means that more records are grouped together when the model is computing parameter updates, and that makes it less likely that the  (for more background on client training and record batches, check out the Dog Problem 2 problem statement).  The second way is by adding random noise during training to provide differential privacy noise. But we don't want to add more noise than we have to; the added noise significantly reduces the utility of the client models in the high privacy setting on the dog data.  You’ll help us explore the effectiveness of these different protection methods in this problem.  
+								
+								<br><br>
+								<u>We have four sets of client models for you to attack in the dog data problems (these same models are used in both problems):</u>
+								
+								<br><br>
+								<ul>
+									<li><b>CNN Batch Size 5:</b> These client models have no added noise, and have a small batch size possibly making them more likely to overfit the individual records in their training data.  </li>
+									<li><b>CNN Batch Size 40:</b> These client models have no added noise, but they have a larger training batch size which may make it more difficult to attack individual records. </li>
+									<li><b>Low Privacy DP:</b> These client models have batch size 40 and also have noise added to every gradient computed during the training process, with privacy loss parameter set to 200.  They perform nearly as well on the task as the regular CNN.  Is their privacy protection any different than the regular CNN? </li>
+									<li><b>High Privacy DP:</b> These client models have batch size 40 and have added noise with privacy loss parameter epsilon set to 20. They should hopefully be private, but the added noise reduces their utility significantly on the dog data. </li>
+								</ul>
+								
+								In order to make an attack model, you need data to train it on.  The attacker doesn’t have access to the original client 
+								data, of course, but in the real world they might be able to buy similar, overlapping data sets from a data broker.   
+								
+								<br><br>
+								<u>For each client model we will provide you with two sets of records to help train your attack:</u> 
+								<br><br>
+								<ul>
+									<li><b>Relevant Records:</b> These complete records (including correct dog breed label) are similar to the clients training 
+										data, but might or might not have been actually included in the client’s training data.  </li>
+									<li><b>External Records:</b> These complete records (including correct dog breed label) are guaranteed to have not been 
+										included in the client’s training data. </li>
+								</ul>
+								<br>
+								<p>
+									<img src="../images/DogProb1_Diagram.png" height="450">
+								</p>
+			
+								You can use the relevant and external records, combined with predictions from the client model, to train a separate attack for each 
+								client.  Accurate, high confidence predictions are more likely to refer to members of the client’s training data.  Note that this is 
+								a realistic attack scenario; the relevant records include real client member records, but they also include some other records that 
+								are not members.  The external records are guaranteed to not be client records for the target client. 
+			
+								<br><br>
+								How precisely do you train an attack model?   Check out our resources page for libraries and references. 
+			
+								<br><br>
+								<h3 id="challenge">Dog Problem 1 Definition</h3>
+								<p>
+								You can find a link to the competitors pack with everything you need to prepare a submission on the <a href="submit.html">Submit</a> page.
+								<br><br>
+								For each of our four privacy settings (CNN5, CNN40, DPLowPrivacy, DPHighPrivacy) we’ll provide the following (see Federated Membership 
+								Inference Attack Design diagram above): 
+			
+								<ul>
+									<li><b>Client models 0, 1, 2, 3.</b> These represent the worst case for privacy, overtrained local models that the untrusted central 
+										aggregator might be able to attack. Like real world clients, they have different data distributions. Some may be easier to 
+										attack and some may be harder. </li>
+									<li><b>Relevant records and External records for each client.</b> This is data you can use to train your attack model, see Executing 
+										a Membership Attack for more information. </li>
+									<li><b>Challenge Records.</b> These are the records we want you to attack.  Each record has a unique index number.   For each record, predict 
+										whether it belongs to client 0, 1, 2, 3 or write -1 if none of the above.</li>
+								</ul>
+			
+								We also provide a demonstration notebook that walks through a simple membership inference attack on Client 2, along with  example submission 
+								files.
+								
+								<br><br>
+								<h3 id="format">Dog Problem 1 Submission Format </h3> 
+								
+								For each of the four privacy settings, submit a Challenge Record Prediction csv file with the challenge record index number and your prediction 
+								for which client it belongs to: 0, 1, 2, 3 or -1 for none.
+									
+								<br><br>
+								<img src="../images/DogProb1_SubmissionFormat.png" height="160">
+									
+								<br><br>
+								We’ll also ask you for any references (papers, libraries, etc) relevant to your submission, a short description of your approach, an 
+								estimate of the computation time/power needed for your approach, and whether you’d like to be included in our Techniques showcase.  
+									
+								<br><br>
+								<h3 id="schedule">Dog Problem 1 Submission Schedule:</h3>
+							  
+							  Check the <a href="#Calendar">Calendar</a> for the leaderboard deadline.  Submit your predictions for the challenge records by the  deadline, and you’ll get back a percentage accuracy on the<a href="home/#leaderboard"> Leaderboard</a>.
+							  
+							  <br><br>
+								<b><i>You can submit up to three attack attempts</i></b>, using different approaches/configurations. 
+								Your team will be scored by your highest performing entry. This gives you a chance to try out multiple libraries or ideas. 	We’ll be rating different attack libraries by how successful they are, and sharing what we learn about the overall privacy protection 
+								of different client models. The goal here isn’t just to get at the top of the leaderboard, it’s to find out together in a realistic 
+								setting how attacks behave, and how safe these models really are.    
+								
+								<br><br>
+								<h3 id="practice">Dog Problem 1 Practice data:</h3>  
+			
+								In each problem we'll provide you with some demonstration data; essentially a part of the problem where we give you the answers for 
+								free, so you can try out different techniques locally before you submit. For the dog data problem 1, the competitor's pack includes 
+								the membership list for Client 2.
+							</p>
+						</section>
+					</div>
+<!-- ------------------------------------------------------------- -->
+<!--    Dog Data Problem 2 TAB                    						   -->
+<!-- ------------------------------------------------------------- -->
+					<div class="tab-content">
+						<section>
+							<h3 id="dog-problem-2">Problem 2: Reconstruction Attack </h3>
+							
+							Recall that in federated learning, the clients exchange model training information with the central model.  Clients first compute model gradients based just on their local data. They send these to the Central Model which averages them together. Each round the clients get a new average gradient from the central model and then compute a series of updates to it based on samples (batches) from their local data. 
+							
+							<br><br>
+							For this problem we look into whether an attacker can use leaked local client gradients to reconstruct genetic records, and whether an attacker can reconstruc records <i>well enough</i> to learn a specific piece of sensitive information about them.  On human data an attacker might try to infer the presence of a medical condition or sensitive genetic trait in the training data.  For our dog data, we're going to have you hunt for hounds.   
+							<br><br> 
+								<b>Research Questions:</b> For problem 2 on the dog breed data, we tackle a worst case senario for reconstruction: What happens when the federated system leaks gradient upates during local training?  We want to explore the following important questions: 
+								</p>
+								<ul>
+									<li>Are the regular CNN’s vulnerable to membership inference attacks? </li>
+									<li>Do larger batch sizes reduce models' vulnerability to attacks, as compared to small batch sizes?</li>
+									<li>Can differential privacy help protect client data?</li>
+									<li>Different clients have different local data distributions– does the effectiveness of differential privacy differ 
+										for different clients?</li>
+								</ul>
+							
+								
+								<br>
+								<b>Machine Learning Data and Task:</b> The task the models are trained to do here is predict dog breed group based on genetic data. 
+								The columns in the data have been reduced to gene variants relevant for this task.The overall distribution of dog breed group labels in the population as a whole looks like this:  
+								
+								<br><br>
+							 The overall distribution of dog breed group labels in the population as a whole looks like this:  
+								
+								<br><br>
+								<img src="../images/DogBreedLabelDistribution.png" height="255">
+								
+								<br><br>
+								<h3>Executing a Reconstruction Attack:</h3>
+			
+								The competitors pack provides data and models needed to attack local training across four clients.  We assume that the federated system leaks six gradients from each client.  The diagram below illustrates the two tasks in this problem: Reconstruct Three and Hound Hunt. 
+								
+								<br>
+								<br>
+								<p>
+									<img src="../images/DogProb2_Diagram.png" height="450">
+								</p>
+								
+								A reconstruction attack typically operates by trying out different possible record values, searching for a set of records (with the specified labels), that could have produced the provided client gradient update.  The competitor's pack includes a tutorial notebook that demonstrates a basic attack using the Breaching library.  For the Reconstruct Three task, all you need to do is reconstruct three records with the indicated labels that could have been included in each batch gradient's record set.  
+								<br><br> 
+								The Hound Hunt task is an opportunity for creativity; there are many different ways you might try to determine whether a given gradient's record batch included one or more hound records.  The Breaching library will reconstruct full record batches with and without labels, and you should remember that the client models have been trained to predict whether records are hounds.  The notebook provides one example hound hunt attack approach, but we hope you'll explore other possibilities as well. 
+							
+								<br><br>
+								<b>We have four sets of client models for you to attack, at different privacy levels:</b>
+						
+								<br><br>
+								<ul>
+									<li><b>CNN Batch Size 5:</b> These client models have no added noise, and have a small batch size possibly making them more likely to overfit the individual records in their training data.  </li>
+									<li><b>CNN Batch Size 40:</b> These client models have no added noise, but they have a larger training batch size which may make it more difficult to attack individual records. </li>
+									<li><b>Low Privacy DP:</b> These client models have batch size 40 and also have noise added to every gradient computed during the training process, with privacy loss parameter set to 200.  They perform nearly as well on the task as the regular CNN.  Is their privacy protection any different than the regular CNN? </li>
+									<li><b>High Privacy DP:</b> These client models have batch size 40 and have added noise with privacy loss parameter epsilon set to 20. They should hopefully be private, but the added noise reduces their utility significantly on the dog data. </li>
+								</ul>
+
+							
+								<br><br>
+								<h3 id="challenge">Dog Data Problem 2 Red Team Challenge</h3>
+								<p>
+								You can find a link to the competitors pack with everything you need to prepare a submission on the <a href="submit.html">Submit</a> page.
+								<br><br>
+								For each of our four privacy settings (CNN5, CNN40, DPLowPrivacy, DPHighPrivacy)  we’ll provide the following: 
+			
+								<ul>
+								  	<li><b>Client models 0, 1, 2, 3 </b>  These are the exact same models used in Dog Data Problem 1.</li>
+									  <li><b>Challenge gradients and record labels, </b> for each client we provide six gradients, and for each gradient we provide the full batch size and three record labels to attack (these labels never include hounds). This is the leaked information you use for your attack, see Executing a Reconstruction Attack for more information. </li>
+								</ul>
+								
+								We also provide a demonstration notebook that walks through a simple reconstruction and hound hunt attack using the Breach library, along with all of the correct answers for Client 2 so you can test your appraoch.  Template submission files can be found in each client folder for you to complete with your recosntructed records (see below). 
+								
+								<br><br>
+								<h3 id="format">Dog Data Problem 2 Submission Format and Scoring:</h3> 
+								
+								For  each of the four privacy settings, we provide submission csv files to make it easy to submit the results of your reconstruction attack and hound hunt. There's a separate submission file for Task 1 (Reconstruct Three) and Task 2 (Hound Hunt).  The tutorial notebook in the competitor's pack provides a walkthrough for creating a submission.
+								
+								<br><br>
+								<b>Task 1 "Reconstruct Three":</b> The reconstruction attack submission file is formatted as shown below: the first column gives the client number, the second column gives the gradient number (there are six gradients for each client), and the third column gives the label of the record you're reconstructing.  The remaining columns will be all 0's (placeholder values) and should be replaced with the reconstructed record values. 
+								
+								<br><br>
+								<img src="../images/DogProb2Task1_SubmissionFormat.png" height="320">
+								<br><br>
+								
+								<br><br> 
+							Note that we're only asking you to reconstruct 3 records from training batches that actually contain approximately 5 or 40 samples (batch sizes vary slightly on DP models).  When we score your submission, we'll first match each of your three reconstructed records with the most similar real record in the training batch, and then we score how closely they reconstructed their matched record.   Scoring is based on counting how many genes match between the original record and the reconstructed record, with a focus on genes of interest (selected genes with high entropy).  Although the data is provided in binary format (known as one-hot encoding), the competitor's pack notebook also includes a scoring function that reverts the data to gene variant format for computing gene similarity scores.  
+								
+								<br><br>
+								<b> Task 2 "Hound Hunt":</b> The hound hunt attack submission file is shown below: The first two columns are the same as in Task 1, the client number and gradient number (with six gradients per client).  The third column then asks if that gradient's record batch contained <i>any</i> hounds, and the fourth column asks if had several hounds (more than 4 for the models with batch size 40).  These last two columns will be all 0's (placeholder values) and should be replaced with your hound hunt answers (1 if true, 0 if false).
+								
+								<br><br>
+								<img src="../images/DogProb2Task2_SubmissionFormat.png" height="320">
+								<br><br>
+								
+									<br><br>
+							We’ll also ask you for any references (papers, libraries, etc) relevant to your submission, a short description of your approach, an estimate of the computation time/power needed for your approach, and whether you’d like to be included in our Techniques showcase. 
+								
+						
+							
+								<br><br>
+								<h3 id="schedule">Dog Data Problem 2 Submission Schedule:</h3>
+								
+								 Check the <a href="#Calendar">Calendar</a> for the leaderboard deadline.  Submit your predictions for the challenge records by the  deadline, and you’ll get back a percentage accuracy on the<a href="home/#leaderboard"> Leaderboard</a>.
+							  
+							  <br><br>
+								<b><i>You can submit up to three attack attempts</i></b>, using different approaches/configurations. 
+								Your team will be scored by your highest performing entry. This gives you a chance to try out multiple libraries or ideas. 	We’ll be rating different attack libraries by how successful they are, and sharing what we learn about the overall privacy protection 
+								of different client models. The goal here isn’t just to get at the top of the leaderboard, it’s to find out together in a realistic 
+								setting how attacks behave, and how safe these models really are.   
+							
 								<br><br>
 								<h3 id="practice">Practice data:</h3>  
 			
