@@ -811,10 +811,10 @@
 								<b>Task 1 "Reconstruct Three":</b> The reconstruction attack submission file is formatted as shown below: the first column gives the client number, the second column gives the gradient number (there are six gradients for each client), and the third column gives the label of the record you're reconstructing.  The remaining columns will be all 0's (placeholder values) and should be replaced with the reconstructed record values. 
 								
 								<br><br>
-								<img src="../images/DogProb2Task1_SubmissionFormat.png" height="300">
-								<br><br>
+								<img src="../images/DogProb2Task1_SubmissionFormat.png" height="325">
 								
 								<br><br> 
+								
 							Note that we're only asking you to reconstruct 3 records from training batches that actually contain approximately 5 or 40 samples (batch sizes vary slightly on DP models).  When we score your submission, we'll first match each of your three reconstructed records with the most similar real record in the training batch, and then we score how closely they reconstructed their matched record.   Scoring is based on counting how many genes match between the original record and the reconstructed record, with a focus on genes of interest (selected genes with high entropy).  Although the data is provided in binary format (known as one-hot encoding), the competitor's pack notebook also includes a scoring function that reverts the data to gene variant format for computing gene similarity scores.  
 								
 								<br><br>
